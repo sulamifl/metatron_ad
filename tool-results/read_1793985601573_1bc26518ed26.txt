@@ -1,0 +1,1091 @@
+     1→// Статьи Metatron.ad — 10 материалов в 4 языках (ru, kk, zh, en)
+     2→import type { Article } from "./types";
+     3→
+     4→export const articles: Article[] = [
+     5→  // ===================================================================
+     6→  // 1. Sulametrix.ai platform
+     7→  // ===================================================================
+     8→  {
+     9→    slug: "sulametrix-ai-platform",
+    10→    category: "sulametrix",
+    11→    cover: "/images/metatron-cube.webp",
+    12→    coverAlt: "Metatron's Cube glyph representing the Sulametrix analytics platform",
+    13→    date: "2025-01-20",
+    14→    readTime: 7,
+    15→    featured: true,
+    16→    translations: {
+    17→      ru: {
+    18→        title: "Sulametrix.ai: ИИ-платформа предиктивной аналитики",
+    19→        excerpt:
+    20→          "Как Sulametrix.ai объединяет машинное обучение, временные ряды и бизнес-метрики, чтобы превращать сырые данные в предиктивные сценарии для принятия решений.",
+    21→        author: "Редакция Metatron.ad",
+    22→        content: `<h2>Что такое Sulametrix.ai</h2>
+    23→<p><strong>Sulametrix.ai</strong> — это аналитическая платформа, разработанная командой Metatron.ad для предиктивной аналитики бизнес-данных. В отличие от классических BI-инструментов, которые показывают, что уже произошло, Sulametrix.ai строит вероятностные модели того, что произойдёт дальше — и почему.</p>
+    24→<p>Платформа принимает на вход сырые данные из CRM, ERP, финансовых систем и внешних источников, нормализует их и прогоняет через конвейер моделей машинного обучения. На выходе пользователь получает прогнозы спроса, оттока клиентов, выручки и рисков — с указанием доверительных интервалов и ключевых факторов.</p>
+    25→
+    26→<h2>Научный подход</h2>
+    27→<p>В основе Sulametrix.ai лежат три научных направления: <strong>анализ временных рядов</strong>, <strong>ансамблевое машинное обучение</strong> и <strong>причинно-следственный вывод</strong>. Команда сознательно отказалась от «чёрных ящиков» в пользу интерпретируемых моделей — каждый прогноз сопровождается объяснением влияющих факторов.</p>
+    28→<ul>
+    29→<li>Prophet и NeuralProphet для сезонных временных рядов;</li>
+    30→<li>Градиентный бустинг (LightGBM, XGBoost) для табличных признаков;</li>
+    31→<li>Байесовские модели для оценки неопределённости;</li>
+    32→<li>SHAP-значения для интерпретации вклада каждого фактора.</li>
+    33→</ul>
+    34→<blockquote><p>«Хороший прогноз — это не число, а диапазон с понятными границами и объяснением, откуда они взялись», — принцип, которым руководствуется наша научная группа.</p></blockquote>
+    35→
+    36→<h2>Применение в бизнес-аналитике</h2>
+    37→<p>Sulametrix.ai закрывает три типичных сценария: <strong>планирование спроса</strong> (помесячный и понедельный горизонт), <strong>управление рисками</strong> (скоринг контрагентов и прогноз просрочек) и <strong>оптимизация ценообразования</strong> (эластичность спроса по сегментам). Платформа интегрируется с 1С, Bitrix24 и популярными облачными CRM через готовые коннекторы.</p>
+    38→<p>Особое внимание уделено качеству данных: встроенный модуль валидации автоматически выявляет пропуски, выбросы и аномалии ещё до обучения моделей. Это критично — как показывает практика, до 60% времени аналитика уходит именно на очистку данных, а Sulametrix.ai сокращает этот этап в несколько раз.</p>
+    39→<p>В 2025 году дорожная карта платформы включает модуль <strong>«цифрового двойника» компании</strong> — симулятора, позволяющего тестировать управленческие гипотезы («что будет, если поднять цену на 8%») до их реализации.</p>`,
+    40→      },
+    41→      kk: {
+    42→        title: "Sulametrix.ai: болжамды аналитика жасанды интеллект платформасы",
+    43→        excerpt:
+    44→          "Sulametrix.ai платформасы машиналық оқытуды, уақыт қатарын және бизнес-метрикаларды біріктіріп, шикі деректерді шешім қабылдау үшін болжамды сценарийлерге айналдырады.",
+    45→        author: "Metatron.ad редакциясы",
+    46→        content: `<h2>Sulametrix.ai дегеніміз не</h2>
+    47→<p><strong>Sulametrix.ai</strong> — Metatron.ad командасы әзірлеген, бизнес деректерін болжамды талдауға арналған аналитикалық платформа. Классикалық BI-құралдардан айырмашылығы, олар болған оқиғаны көрсететін болса, Sulametrix.ai болашақта не болатыны туралы ықтималдық модельдерді құрады — әрі неге екенін түсіндіреді.</p>
+    48→<p>Платформа CRM, ERP, қаржылық жүйелер мен сыртқы дереккөздерден шикі деректерді қабылдайды, оларды қалыпқа келтіреді және машиналық оқыту модельдерінің конвейерінен өткізеді. Нәтижесінде пайдаланушы сұраныс, тұтынушылардың кетуі, кіріс және тәуекел болжамдарын алады — сенімділік аралықтары мен негізгі факторлар көрсетілген.</p>
+    49→
+    50→<h2>Ғылыми тәсіл</h2>
+    51→<p>Sulametrix.ai негізінде үш ғылыми бағыт жатыр: <strong>уақыт қатарын талдау</strong>, <strong>ансамбльдік машиналық оқыту</strong> және <strong>себеп-салдар тұжырымы</strong>. Команда «қара жәшік» модельдерден бас тартып, интерпретацияланатын модельдерді таңдады — әр болжамға әсер ететін факторлардың түсіндірмесі қоса беріледі.</p>
+    52→<ul>
+    53→<li>Маусымдық уақыт қатарлары үшін Prophet және NeuralProphet;</li>
+    54→<li>Кестелік белгілер үшін градиенттік бустинг (LightGBM, XGBoost);</li>
+    55→<li>Белгісіздікті бағалау үшін Байес модельдері;</li>
+    56→<li>Әр фактордың үлесін интерпретациялау үшін SHAP-мәндері.</li>
+    57→</ul>
+    58→<blockquote><p>«Жақсы болжам — бұл сан емес, шекарасы мен оның қайдан келгені түсіндірілген аралық», — біздің ғылыми топ басшылық ететін қағида.</p></blockquote>
+    59→
+    60→<h2>Бизнес-аналитикада қолданысы</h2>
+    61→<p>Sulametrix.ai үш типтік сценарийді жабады: <strong>сұранысты жоспарлау</strong> (айлық және апталық көкжиек), <strong>тәуекелді басқару</strong> (контрагенттерді скорингтеу және өтеу мерзімін болжау) және <strong>баға белгілеуді оңтайландыру</strong> (сегменттер бойынша сұраныс икемділігі). Платформа 1С, Bitrix24 және танымал бұлтты CRM жүйелерімен дайын коннекторлар арқылы бірігеді.</p>
+    62→<p>Деректер сапасына ерекше назар аударылған: ішкі валидация модулі модельдерді оқытуға дейін ғана қателіктерді, шеткі мәндерді және аномалияларды автоматты түрде анықтайды. Бұл маңызды — тәжірибеде аналитик уақытының 60%-ы деректерді тазалауға кетеді, ал Sulametrix.ai бұл кезеңді бірнеше есе қысқартады.</p>
+    63→<p>2025 жылы платформа жол картасына <strong>компанияның «сандық қосалқысы»</strong> модулі кіреді — басқару гипотезаларын («бағаны 8%-қа көтерсек не болады») іс жүзінде жүзеге асырмай бұрын тексеруге мүмкіндік беретін симулятор.</p>`,
+    64→      },
+    65→      zh: {
+    66→        title: "Sulametrix.ai：预测性分析的 AI 平台",
+    67→        excerpt:
+    68→          "Sulametrix.ai 将机器学习、时间序列与业务指标融合，把原始数据转化为可支撑决策的预测性场景。",
+    69→        author: "Metatron.ad 编辑部",
+    70→        content: `<h2>什么是 Sulametrix.ai</h2>
+    71→<p><strong>Sulametrix.ai</strong> 是由 Metatron.ad 团队开发的预测性业务数据分析平台。与仅呈现历史事实的传统 BI 工具不同，Sulametrix.ai 构建的是"未来会发生什么——以及为什么"的概率模型。</p>
+    72→<p>平台从 CRM、ERP、财务系统及外部数据源接入原始数据，完成归一化后送入机器学习模型流水线。最终用户可获得需求预测、客户流失预测、营收预测与风险预测，并附带置信区间与关键影响因子。</p>
+    73→
+    74→<h2>科学方法</h2>
+    75→<p>Sulametrix.ai 的底层由三大科学方向支撑：<strong>时间序列分析</strong>、<strong>集成式机器学习</strong>与<strong>因果推断</strong>。团队刻意回避"黑箱"模型，选择可解释性——每一个预测都附带影响因子的解释。</p>
+    76→<ul>
+    77→<li>季节性时间序列采用 Prophet 与 NeuralProphet；</li>
+    78→<li>表格型特征采用梯度提升（LightGBM、XGBoost）；</li>
+    79→<li>不确定度估计采用贝叶斯模型；</li>
+    80→<li>因子贡献解释采用 SHAP 值。</li>
+    81→</ul>
+    82→<blockquote><p>"好的预测不是某一个数字，而是带有清晰边界与来源解释的区间"——这是我们的科研团队所坚持的原则。</p></blockquote>
+    83→
+    84→<h2>在商业分析中的应用</h2>
+    85→<p>Sulametrix.ai 覆盖三类典型场景：<strong>需求规划</strong>（月度与周度预测窗口）、<strong>风险管理</strong>（交易对手评分与逾期预测）、<strong>定价优化</strong>（按分群估计需求弹性）。平台通过预置连接器与 1С、Bitrix24 及主流云 CRM 集成。</p>
+    86→<p>数据质量被格外重视：内置校验模块在训练模型前就会自动识别缺失值、离群点与异常。这一点至关重要——实践中分析师多达 60% 的时间都花在数据清洗上，而 Sulametrix.ai 可将该环节缩短数倍。</p>
+    87→<p>2025 年的产品路线图包含<strong>"企业数字孪生"模块</strong>——一个可在真实落地前测试管理假设（"如果价格上调 8% 会怎样"）的模拟器。</p>`,
+    88→      },
+    89→      en: {
+    90→        title: "Sulametrix.ai: An AI Platform for Predictive Analytics",
+    91→        excerpt:
+    92→          "How Sulametrix.ai combines machine learning, time-series modelling and business metrics to turn raw data into predictive scenarios for decision-making.",
+    93→        author: "Metatron.ad Editorial",
+    94→        content: `<h2>What Sulametrix.ai Is</h2>
+    95→<p><strong>Sulametrix.ai</strong> is an analytics platform built by the Metatron.ad team for predictive business analytics. Unlike classical BI tools that show what has already happened, Sulametrix.ai builds probabilistic models of what will happen next — and why.</p>
+    96→<p>The platform ingests raw data from CRM, ERP, financial systems and external sources, normalises it and runs it through a pipeline of machine-learning models. The output is forecasts of demand, churn, revenue and risk — each accompanied by confidence intervals and the key drivers behind it.</p>
+    97→
+    98→<h2>The Scientific Approach</h2>
+    99→<p>Sulametrix.ai rests on three scientific pillars: <strong>time-series analysis</strong>, <strong>ensemble machine learning</strong> and <strong>causal inference</strong>. The team deliberately avoided black-box models in favour of interpretable ones — every forecast ships with an explanation of contributing factors.</p>
+   100→<ul>
+   101→<li>Prophet and NeuralProphet for seasonal time series;</li>
+   102→<li>Gradient boosting (LightGBM, XGBoost) for tabular features;</li>
+   103→<li>Bayesian models for uncertainty estimation;</li>
+   104→<li>SHAP values for factor-level interpretation.</li>
+   105→</ul>
+   106→<blockquote><p>"A good forecast is not a number — it is a range with clear boundaries and an explanation of where they came from." This is the principle our research group lives by.</p></blockquote>
+   107→
+   108→<h2>Applications in Business Analytics</h2>
+   109→<p>Sulametrix.ai covers three typical scenarios: <strong>demand planning</strong> (monthly and weekly horizons), <strong>risk management</strong> (counterparty scoring and delinquency forecasting) and <strong>pricing optimisation</strong> (price elasticity by segment). The platform integrates with 1С, Bitrix24 and popular cloud CRMs through ready-made connectors.</p>
+   110→<p>Special attention is paid to data quality: the built-in validation module automatically surfaces gaps, outliers and anomalies before any model is trained. This matters — in practice, up to 60% of an analyst's time goes to data cleaning, and Sulametrix.ai shortens that phase several times over.</p>
+   111→<p>The 2025 roadmap includes a <strong>"digital twin" module for the company</strong> — a simulator that lets management test hypotheses ("what happens if we raise prices by 8%") before committing them to reality.</p>`,
+   112→      },
+   113→    },
+   114→  },
+   115→
+   116→  // ===================================================================
+   117→  // 2. Bioethanol from hemp
+   118→  // ===================================================================
+   119→  {
+   120→    slug: "bioethanol-from-hemp",
+   121→    category: "bioenergy",
+   122→    cover: "/images/lotus-om.webp",
+   123→    coverAlt: "Lotus and Om symbol representing sustainable bioenergy from hemp",
+   124→    date: "2025-01-18",
+   125→    readTime: 6,
+   126→    featured: true,
+   127→    translations: {
+   128→      ru: {
+   129→        title: "Биоэтанол из конопли: зелёная альтернатива ископаемому топливу",
+   130→        excerpt:
+   131→          "Промышленная конопля даёт больше биомассы на гектар, чем кукуруза, и не конкурирует с продовольственными культурами. Команда Metatron.ad исследует технологию получения биоэтанола из конопляной целлюлозы.",
+   132→        author: "Редакция Metatron.ad",
+   133→        content: `<h2>Почему именно конопля</h2>
+   134→<p><strong>Промышленная конопля</strong> (Cannabis sativa с содержанием ТГК ниже 0,3%) — одна из самых недооценённых энергетических культур. За вегетационный период 90–120 дней она формирует до 15 тонн сухой биомассы на гектар, что в 2–3 раза превышает показатели кукурузы и сахарного тростника при сопоставимых затратах.</p>
+   135→<p>В отличие от зерновых, конопля не конкурирует с продовольственным рынком: её стебли идут на целлюлозу, а семена — на корм и масло. Глубокая корневая система улучшает структуру почвы, а фиторемедиация позволяет осваивать деградированные и загрязнённые земли.</p>
+   136→
+   137→<h2>Технология получения биоэтанола</h2>
+   138→<p>Процесс состоит из четырёх этапов: <strong>механическая подготовка</strong> (измельчение стеблей), <strong>предобработка</strong> (разрушение лигноцеллюлозной матрицы паровым взрывом или щёлочной обработкой), <strong>ферментативный гидролиз</strong> (целлюлазы расщепляют целлюлозу до глюкозы) и <strong>ферментация</strong> дрожжами Saccharomyces cerevisiae.</p>
+   139→<ul>
+   140→<li>Выход глюкозы из конопляной целлюлозы — до 480 кг с тонны сырья;</li>
+   141→<li>Теоретический выход этанола — около 0,51 г на грамм глюкозы;</li>
+   142→<li>Плотность энергии биоэтанола — 26,8 МДж/кг;</li>
+   143→<li>Сокращение выбросов CO₂ по сравнению с бензином — 60–80%.</li>
+   144→</ul>
+   145→<blockquote><p>«Конопля — это не про прошлое, а про будущее биоэнергетики: культура, которая даёт топливо, волокно и чистую почву одновременно», — отмечает наша биоэнергетическая группа.</p></blockquote>
+   146→
+   147→<h2>Экологические и экономические выгоды</h2>
+   148→<p>Жизненный цикл конопляного биоэтанола характеризуется отрицательным или близким к нулю углеродным следом: растение поглощает CO₂ при росте, а при сжигании этанола возвращает лишь то, что было зафиксировано. Расчёты команды Metatron.ad показывают, что переход 10% автопарка на E10-смесь (10% этанола) в регионе с 1 миллионом тонн конопляной биомассы сократит выбросы на 180–220 тысяч тонн CO₂ в год.</p>
+   149→<p>Экономически конопля выгодна фермеру дважды: продажа биомассы для переработки плюс премии за углеродные квоты. В 2025 году команда запускает пилотную установку производительностью 5 тысяч литров этанола в сутки.</p>`,
+   150→      },
+   151→      kk: {
+   152→        title: "Қаңбырдан биоэтанол: отынға жасыл балама",
+   153→        excerpt:
+   154→          "Техникалық қаңбыр гектарынан жүгеріден көп биомасса береді және азық-түлік дақылдарымен бәсекелеспейді. Metatron.ad командасы қаңбыр целлюлозасынан биоэтанол алу технологиясын зерттейді.",
+   155→        author: "Metatron.ad редакциясы",
+   156→        content: `<h2>Неге дәл қаңбыр</h2>
+   157→<p><strong>Техникалық қаңбыр</strong> (ТГҚ құрамы 0,3%-тан төмен Cannabis sativa) — ең аз бағаланатын энергетикалық дақылдардың бірі. 90–120 күндік вегетация кезеңінде ол гектарына 15 тоннаға дейін құрғақ биомасса береді, бұл жүгері мен қант қамысының көрсеткіштерін 2–3 есе асып түседі.</p>
+   158→<p>Дәнді дақылдардан айырмашылығы, қаңбыр азық-түлік нарығымен бәсекелеспейді: сабақтары целлюлозаға, ал тұқымдары жем мен майға кетеді. Терең тамыр жүйесі топырақ құрылымын жақсартады, ал фиторемедиация деградацияланған және ластанған жерлерді игеруге мүмкіндік береді.</p>
+   159→
+   160→<h2>Биоэтанол алу технологиясы</h2>
+   161→<p>Процесс төрт кезеңнен тұрады: <strong>механикалық дайындық</strong> (сабақтарды ұсақтау), <strong>алдын ала өңдеу</strong> (лигноцеллюлозды матрицаны бумен немесе сілтілі өңдеумен бұзу), <strong>ферменттік гидролиз</strong> (целлюлаза целлюлозаны глюкозаға ыдыратады) және Saccharomyces cerevisiae ашытқыларымен <strong>ашыту</strong>.</p>
+   162→<ul>
+   163→<li>Қаңбыр целлюлозасынан глюкоза шығымы — тонна шикізаттан 480 кг-ға дейін;</li>
+   164→<li>Этанолдың теориялық шығымы — әр грамм глюкозаға 0,51 г;</li>
+   165→<li>Биоэтанолдың энергия тығыздығы — 26,8 МДж/кг;</li>
+   166→<li>Бензинмен салыстырғанда CO₂ шығарындыларын 60–80%-қа азайту.</li>
+   167→</ul>
+   168→<blockquote><p>«Қаңбыр — бұл өткендік емес, биоэнергетикалық болашақ: отын, талшық және таза топырақты бір уақытта беретін дақыл», — біздің биоэнергетикалық топ атап өтеді.</p></blockquote>
+   169→
+   170→<h2>Экологиялық және экономикалық пайдалар</h2>
+   171→<p>Қаңбыр биоэтанолының өмірлік циклы теріс немесе нөлге жақын көміртегі ізімен сипатталады: өсімдік өскен кезде CO₂ сіңіреді, ал этанол жанғанда тек бекітілгенін қайтарады. Metatron.ad командасының есептеулері бойынша, 1 миллион тонна қаңбыр биомассасы бар аймақта автопарктың 10%-ын E10-қоспасына (10% этанол) көшіру жылына 180–220 мың тонна CO₂ шығарындыларын қысқартады.</p>
+   172→<p>Экономикалық тұрғыда қаңбыр фермерге екі пайда әкеледі: биомассаны өңдеуге сату және көміртегі квоталары үшін премиялар. 2025 жылы команда тәулігіне 5 мың литр этанол өндіретін пилоттық қондырғыны іске қосады.</p>`,
+   173→      },
+   174→      zh: {
+   175→        title: "从工业大麻制取生物乙醇：化石燃料的绿色替代品",
+   176→        excerpt:
+   177→          "工业大麻单位面积产出的生物质高于玉米，且不与粮食作物争地。Metatron.ad 团队正在研究从大麻纤维素制取生物乙醇的技术路线。",
+   178→        author: "Metatron.ad 编辑部",
+   179→        content: `<h2>为什么选择大麻</h2>
+   180→<p><strong>工业大麻</strong>（四氢大麻酚含量低于 0.3% 的 Cannabis sativa）是最被低估的能源作物之一。在 90–120 天的生育期内，每公顷可产出高达 15 吨干生物质，在投入相近的情况下是玉米和甘蔗的 2–3 倍。</p>
+   181→<p>与谷物不同，大麻不与粮食市场争地：茎秆用于纤维素，种子用于饲料与油脂。其深根系可改良土壤结构，而植物修复特性使退化与污染土地得以重新利用。</p>
+   182→
+   183→<h2>生物乙醇的制取技术</h2>
+   184→<p>工艺由四个阶段组成：<strong>机械预处理</strong>（茎秆破碎）、<strong>预处理</strong>（通过蒸汽爆破或碱处理破坏木质纤维素基质）、<strong>酶水解</strong>（纤维素酶将纤维素降解为葡萄糖）、以及酿酒酵母（Saccharomyces cerevisiae）<strong>发酵</strong>。</p>
+   185→<ul>
+   186→<li>大麻纤维素的葡萄糖产率达每吨原料 480 公斤；</li>
+   187→<li>乙醇理论产率约每克葡萄糖 0.51 克；</li>
+   188→<li>生物乙醇能量密度为 26.8 МДж/кг；</li>
+   189→<li>相比汽油可减少 60–80% 的 CO₂ 排放。</li>
+   190→</ul>
+   191→<blockquote><p>"大麻关乎的不是过去，而是生物能源的未来：一种同时提供燃料、纤维与清洁土壤的作物"——我们的生物能源研究组指出。</p></blockquote>
+   192→
+   193→<h2>生态与经济效益</h2>
+   194→<p>大麻乙醇的全生命周期具有负碳或近零碳足迹：植物在生长中吸收 CO₂，乙醇燃烧时仅释放此前固定的碳。Metatron.ad 团队的测算显示，在拥有 100 万吨大麻生物质的地区，若将 10% 的车队改用 E10 混合燃料（10% 乙醇），每年可减排 18–22 万吨 CO₂。</p>
+   195→<p>在经济层面，大麻让农户获得双重收益：出售生物质供加工，并获得碳配额奖励。2025 年团队将启动日产 5000 升乙醇的中试装置。</p>`,
+   196→      },
+   197→      en: {
+   198→        title: "Bioethanol from Hemp: A Green Alternative to Fossil Fuels",
+   199→        excerpt:
+   200→          "Industrial hemp yields more biomass per hectare than maize and doesn't compete with food crops. The Metatron.ad team is researching ethanol production from hemp cellulose.",
+   201→        author: "Metatron.ad Editorial",
+   202→        content: `<h2>Why Hemp</h2>
+   203→<p><strong>Industrial hemp</strong> (Cannabis sativa with THC below 0.3%) is one of the most underappreciated energy crops. In a 90–120 day vegetation cycle it produces up to 15 tonnes of dry biomass per hectare — 2–3 times more than maize or sugarcane at comparable input costs.</p>
+   204→<p>Unlike cereals, hemp does not compete with the food market: its stalks become cellulose, its seeds become feed and oil. A deep root system improves soil structure, and phytoremediation allows degraded and contaminated land to be brought back into use.</p>
+   205→
+   206→<h2>The Ethanol Production Technology</h2>
+   207→<p>The process has four stages: <strong>mechanical preparation</strong> (shredding stalks), <strong>pretreatment</strong> (breaking the lignocellulosic matrix via steam explosion or alkaline treatment), <strong>enzymatic hydrolysis</strong> (cellulases break cellulose into glucose) and <strong>fermentation</strong> with Saccharomyces cerevisiae yeast.</p>
+   208→<ul>
+   209→<li>Glucose yield from hemp cellulose — up to 480 kg per tonne of feedstock;</li>
+   210→<li>Theoretical ethanol yield — about 0.51 g per gram of glucose;</li>
+   211→<li>Energy density of bioethanol — 26.8 MJ/kg;</li>
+   212→<li>CO₂ reduction vs. petrol — 60–80%.</li>
+   213→</ul>
+   214→<blockquote><p>"Hemp is not about the past, it's about the future of bioenergy: a crop that gives fuel, fibre and clean soil at the same time," notes our bioenergy group.</p></blockquote>
+   215→
+   216→<h2>Environmental and Economic Benefits</h2>
+   217→<p>The life cycle of hemp ethanol has a negative or near-zero carbon footprint: the plant absorbs CO₂ as it grows, and burning the ethanol only returns what was previously fixed. Metatron.ad team calculations show that switching 10% of the vehicle fleet to an E10 blend (10% ethanol) in a region with 1 million tonnes of hemp biomass would cut emissions by 180–220 thousand tonnes of CO₂ per year.</p>
+   218→<p>Economically, hemp rewards the farmer twice: selling biomass for processing, plus premiums for carbon quotas. In 2025 the team will launch a pilot plant producing 5 thousand litres of ethanol per day.</p>`,
+   219→      },
+   220→    },
+   221→  },
+   222→
+   223→  // ===================================================================
+   224→  // 3. Biogas from food waste
+   225→  // ===================================================================
+   226→  {
+   227→    slug: "biogas-from-food-waste",
+   228→    category: "bioenergy",
+   229→    cover: "/images/eye-of-horus.webp",
+   230→    coverAlt: "Eye of Horus symbol overseeing the circular economy of food-waste biogas",
+   231→    date: "2025-01-16",
+   232→    readTime: 6,
+   233→    translations: {
+   234→      ru: {
+   235→        title: "Биогаз из пищевых отходов: экономика замкнутого цикла",
+   236→        excerpt:
+   237→          "Треть производимой в мире еды отправляется на свалки, где выделяет метан. Команда Metatron.ad разрабатывает технологию анаэробного сбраживания пищевых отходов в биогаз и удобрения.",
+   238→        author: "Редакция Metatron.ad",
+   239→        content: `<h2>Проблема пищевых отходов</h2>
+   240→<p>По данным Продовольственной и сельскохозяйственной организации ООН, около <strong>трети всех производимых в мире продуктов питания</strong> теряется или выбрасывается — это около 1,3 миллиарда тонн ежегодно. На свалках органика разлагается без доступа кислорода и выделяет метан, парниковая активность которого в 28 раз выше, чем у CO₂.</p>
+   241→<p>Переработка этих отходов в биогаз решает сразу две задачи: <strong>улавливание метана</strong> до его попадания в атмосферу и замещение ископаемого природного газа в энергетике.</p>
+   242→
+   243→<h2>Технология анаэробного сбраживания</h2>
+   244→<p>Процесс идёт в герметичных реакторах-метантенках при температуре 35–55 °C. Сообщество микроорганизмов в четыре стадии расщепляет органику до смеси метана (55–70%) и CO₂ (30–45%).</p>
+   245→<ul>
+   246→<li>Гидролиз — сложные полимеры распадаются до сахаров и аминокислот;</li>
+   247→<li>Ацидогенез — образование летучих жирных кислот;</li>
+   248→<li>Ацетогенез — превращение в уксусную кислоту, CO₂ и водород;</li>
+   249→<li>Метаногенез — археи синтезируют метан.</li>
+   250→</ul>
+   251→<blockquote><p>«Каждый килограмм пищевых отходов — это около 0,2 м³ биогаза, или эквивалент 1,2 кВт·ч электричества, которое иначе было бы потеряно», — поясняет наша инженерная группа.</p></blockquote>
+   252→
+   253→<h2>Экономика замкнутого цикла</h2>
+   254→<p>Из тонны пищевых отходов команда получает 100–140 м³ биогаза и 300–400 кг <strong>дигестата</strong> — высококачественного органического удобрения, не содержащего патогенов и семян сорняков (они гибнут при термофильном режиме). Дигестат возвращается в сельское хозяйство, замыкая цикл питательных веществ.</p>
+   255→<p>Модульные установки Metatron.ad рассчитаны на рестораны, торговые сети и фермы: установка объёмом 20 м³ перерабатывает до 600 кг отходов в сутки и покрывает до 70% потребности объекта в тепловой энергии. Окупаемость при текущих тарифах на газ — 3–4 года.</p>`,
+   256→      },
+   257→      kk: {
+   258→        title: "Тамақ қалдықтарынан биогаз: жабық цикл экономикасы",
+   259→        excerpt:
+   260→          "Әлемде өндірілетін тамақтың үштен бірі қоқыс тастайтын жерге барады, онда метан бөлінеді. Metatron.ad командасы тамақ қалдықтарын биогазға және тыңайтқышқа айналдыратын анаэробтық ашыту технологиясын әзірлейді.",
+   261→        author: "Metatron.ad редакциясы",
+   262→        content: `<h2>Тамақ қалдықтары мәселесі</h2>
+   263→<p>БҰҰ-ның Азық-түлік және ауыл шаруашылығы ұйымының мәліметтері бойынша, әлемде өндірілетін <strong>тамақтың шамамен үштен бірі</strong> жоғалады немесе тасталады — бұл жылына 1,3 миллиард тоннаға жуық. Қоқыс тастайтын жерде органика оттегісіз бұзылып, метан бөлінеді, оның жылыжайлық белсенділігі CO₂-ден 28 есе жоғары.</p>
+   264→<p>Бұл қалдықтарды биогазға айналдыру екі мәселені бірден шешеді: атмосфераға түспей жатып <strong>метанды ұстау</strong> және энергетикада отынды газды алмастыру.</p>
+   265→
+   266→<h2>Анаэробтық ашыту технологиясы</h2>
+   267→<p>Процесс тығыз метантенк реакторларында 35–55 °C температурада жүреді. Микроағзалардың қауымдастығы органиканы төрт кезеңде метан (55–70%) мен CO₂ (30–45%) қоспасына ыдыратады.</p>
+   268→<ul>
+   269→<li>Гидролиз — күрделі полимерлер қант пен аминқышқылдарына ыдырайды;</li>
+   270→<li>Ацидогенез — ұшқыш май қышқылдарының түзілуі;</li>
+   271→<li>Ацетогенез — сірке қышқылына, CO₂ және сутегіне айналу;</li>
+   272→<li>Метаногенез — архейлер метан синтездейді.</li>
+   273→</ul>
+   274→<blockquote><p>«Әр килограмм тамақ қалдығы — бұл шамамен 0,2 м³ биогаз, яғни әйтпесе жоғалатын 1,2 кВт·с электр энергиясының баламасы», — біздің инженерлік топ түсіндіреді.</p></blockquote>
+   275→
+   276→<h2>Жабық цикл экономикасы</h2>
+   277→<p>Бір тонна тамақ қалдығынан команда 100–140 м³ биогаз және 300–400 кг <strong>дигестат</strong> алады — патогендер мен арамшөп тұқымдары жоқ (термофилді режимде олар өледі) жоғары сапалы органикалық тыңайтқыш. Дигестат ауыл шаруашылығына оралады, қоректік заттар циклін жабады.</p>
+   278→<p>Metatron.ad модульді қондырғылары мейрамханаларға, сауда желілеріне және шаруаларға арналған: 20 м³ көлеміндегі қондырғы тәулігіне 600 кг-қа дейін қалдық өңдеп, нысанның жылу энергиясына деген сұранысының 70%-ын жабады. Ағымдағы газ тарифтарында өтеуі — 3–4 жыл.</p>`,
+   279→      },
+   280→      zh: {
+   281→        title: "从餐厨垃圾制取沼气：循环经济之路",
+   282→        excerpt:
+   283→          "全球三分之一的食物最终进入垃圾填埋场并释放甲烷。Metatron.ad 团队正在研发将餐厨垃圾厌氧发酵为沼气与肥料的技术。",
+   284→        author: "Metatron.ad 编辑部",
+   285→        content: `<h2>餐厨垃圾问题</h2>
+   286→<p>联合国粮农组织的数据显示，全球约<strong>三分之一的粮食</strong>在供应链中被损失或丢弃——每年约 13 亿吨。在垃圾填埋场中，有机物在缺氧条件下分解并释放甲烷，其温室效应是 CO₂ 的 28 倍。</p>
+   287→<p>将这些废弃物转化为沼气可同时解决两个问题：在甲烷进入大气之前将其<strong>捕获</strong>，并替代化石天然气用于能源。</p>
+   288→
+   289→<h2>厌氧发酵技术</h2>
+   290→<p>反应在 35–55 °C 的密闭发酵罐中进行。微生物群落分四个阶段将有机物分解为甲烷（55–70%）与 CO₂（30–45%）的混合气体。</p>
+   291→<ul>
+   292→<li>水解——高分子裂解为糖与氨基酸；</li>
+   293→<li>酸化——生成挥发性脂肪酸；</li>
+   294→<li>产乙酸——转化为乙酸、CO₂ 与氢气；</li>
+   295→<li>产甲烷——古菌合成甲烷。</li>
+   296→</ul>
+   297→<blockquote><p>"每公斤餐厨垃圾约可产生 0.2 立方米沼气，相当于 1.2 千瓦时电力——否则这些能量将白白流失"，我们的工程组解释道。</p></blockquote>
+   298→
+   299→<h2>循环经济</h2>
+   300→<p>团队每吨餐厨垃圾可获得 100–140 立方米沼气与 300–400 公斤<strong>沼渣</strong>——一种不含病原体与杂草种子（在嗜热条件下被灭活）的优质有机肥。沼渣回归农业，闭合了养分循环。</p>
+   301→<p>Metatron.ad 的模块化装置面向餐厅、连锁商超与农场：一座 20 立方米的装置每日可处理 600 公斤废弃物，并覆盖该对象高达 70% 的热能需求。在现行天然气价格下，投资回收期为 3–4 年。</p>`,
+   302→      },
+   303→      en: {
+   304→        title: "Biogas from Food Waste: The Circular Economy",
+   305→        excerpt:
+   306→          "A third of all food produced ends up in landfills, releasing methane. The Metatron.ad team is developing anaerobic digestion technology that turns food waste into biogas and fertiliser.",
+   307→        author: "Metatron.ad Editorial",
+   308→        content: `<h2>The Food Waste Problem</h2>
+   309→<p>According to the UN Food and Agriculture Organization, about <strong>a third of all food produced worldwide</strong> is lost or discarded — roughly 1.3 billion tonnes per year. In landfills, organic matter decomposes without oxygen and releases methane, a greenhouse gas 28 times more potent than CO₂.</p>
+   310→<p>Converting this waste into biogas solves two problems at once: <strong>capturing methane</strong> before it reaches the atmosphere and displacing fossil natural gas in energy generation.</p>
+   311→
+   312→<h2>Anaerobic Digestion Technology</h2>
+   313→<p>The process runs in sealed digesters at 35–55 °C. A community of microorganisms breaks the organic matter down in four stages into a mixture of methane (55–70%) and CO₂ (30–45%).</p>
+   314→<ul>
+   315→<li>Hydrolysis — complex polymers split into sugars and amino acids;</li>
+   316→<li>Acidogenesis — formation of volatile fatty acids;</li>
+   317→<li>Acetogenesis — conversion to acetic acid, CO₂ and hydrogen;</li>
+   318→<li>Methanogenesis — archaea synthesise methane.</li>
+   319→</ul>
+   320→<blockquote><p>"Every kilogram of food waste is about 0.2 m³ of biogas — equivalent to 1.2 kWh of electricity that would otherwise be lost," explains our engineering group.</p></blockquote>
+   321→
+   322→<h2>The Circular Economy</h2>
+   323→<p>From one tonne of food waste the team obtains 100–140 m³ of biogas and 300–400 kg of <strong>digestate</strong> — a high-quality organic fertiliser free of pathogens and weed seeds (killed off in the thermophilic regime). The digestate returns to agriculture, closing the nutrient loop.</p>
+   324→<p>Metatron.ad's modular units are designed for restaurants, retail chains and farms: a 20 m³ unit processes up to 600 kg of waste per day and covers up to 70% of the facility's heat demand. At current gas tariffs, the payback period is 3–4 years.</p>`,
+   325→      },
+   326→    },
+   327→  },
+   328→
+   329→  // ===================================================================
+   330→  // 4. Sacred geometry in science
+   331→  // ===================================================================
+   332→  {
+   333→    slug: "sacred-geometry-in-science",
+   334→    category: "sciPop",
+   335→    cover: "/images/flower-of-life.webp",
+   336→    coverAlt: "Flower of Life geometric pattern linking ancient symbols to crystallography",
+   337→    date: "2025-01-14",
+   338→    readTime: 5,
+   339→    translations: {
+   340→      ru: {
+   341→        title: "Сакральная геометрия: от древних символов до кристаллографии",
+   342→        excerpt:
+   343→          "Цветок Жизни и Куб Метатрона — не просто декоративные узоры. За ними стоят принципы симметрии, которые современная наука находит в кристаллах, молекулах и биологических структурах.",
+   344→        author: "Редакция Metatron.ad",
+   345→        content: `<h2>Что такое сакральная геометрия</h2>
+   346→<p><strong>Сакральная геометрия</strong> — это совокупность геометрических пропорций и форм, которые в различных духовных традициях считались отражением универсального порядка. К её символам относятся <strong>Цветок Жизни</strong>, <strong>Куб Метатрона</strong>, <strong>Древо Жизни</strong> и золотое сечение.</p>
+   347→<p>Цветок Жизни — это композиция из 19 пересекающихся окружностей, построенная на гексагональной сетке. Куб Метатрона получается соединением центров всех окружностей — в нём легко узнаются пять платоновых тел: тетраэдр, куб, октаэдр, додекаэдр и икосаэдр.</p>
+   348→
+   349→<h2>Симметрия в кристаллографии</h2>
+   350→<p>Современная кристаллография описывает структуру кристаллов через 230 пространственных групп симметрии — и многие из них напрямую связаны с теми же принципами, что лежат в основе сакральных символов. Гексагональная плотнейшая упаковка атомов повторяет узор Цветка Жизни, а пять платоновых тел соответствуют пяти типам кристаллических решёток.</p>
+   351→<ul>
+   352→<li>Тетраэдр — алмазная решётка;</li>
+   353→<li>Куб — галит (NaCl);</li>
+   354→<li>Октаэдр — шпинель;</li>
+   355→<li>Додекаэдр — молекулярные кластеры;</li>
+   356→<li>Икосаэдр — квазикристаллы Шехтмана.</li>
+   357→</ul>
+   358→<blockquote><p>«Древние не знали рентгеноструктурного анализа, но их интуиция формы удивительно точно угадывала законы, управляющие материей», — пишет наш научный обозреватель.</p></blockquote>
+   359→
+   360→<h2>От молекул до галактик</h2>
+   361→<p>Геометрические принципы сакральных символов проявляются на разных масштабах. Молекула <strong>фуллерена C60</strong> имеет форму усечённого икосаэдра — того самого платонова тела. Спиральные структуры ДНК подчиняются золотому сечению, а расположение листьев у растений (филлотаксис) следует числам Фибоначчи.</p>
+   362→<p>Бренд Metatron.ad сознательно опирается на эти символы: они служат визуальным языком, объединяющим научную точность и культурную преемственность.</p>`,
+   363→      },
+   364→      kk: {
+   365→        title: "Сакралды геометрия: көне таңбалардан кристаллографияға дейін",
+   366→        excerpt:
+   367→          "Өмір Гүлі мен Метатрон текшесі — жай безендіру емес. Олардың артында заманауи ғылым кристалдарда, молекулаларда және биологиялық құрылымдарда тапқан симметрия принциптері жатыр.",
+   368→        author: "Metatron.ad редакциясы",
+   369→        content: `<h2>Сакралды геометрия дегеніміз не</h2>
+   370→<p><strong>Сакралды геометрия</strong> — әртүрлі рухани дәстүрлерде әлемдік тәртіптің көрінісі деп саналған геометриялық пропорциялар мен пішіндер жиынтығы. Оның таңбаларына <strong>Өмір Гүлі</strong>, <strong>Метатрон текшесі</strong>, <strong>Өмір Ағашы</strong> және алтын қима жатады.</p>
+   371→<p>Өмір Гүлі — гексагоналды торда салынған 19 қиылысатын шеңберден тұратын композиция. Метатрон текшесі барлық шеңберлердің центрлерін қосып алынады — онда платондық бес дене оңай танылады: тетраэдр, текше, октаэдр, додекаэдр және икосаэдр.</p>
+   372→
+   373→<h2>Кристаллографиядағы симметрия</h2>
+   374→<p>Заманауи кристаллография кристалдардың құрылымын 230 кеңістіктік симметрия тобы арқылы сипаттайды — және олардың көпшілігі сакралды таңбалардың негізінде жатқан принциптермен тікелей байланысты. Атомдардың гексагоналды ең тығыз орналасуы Өмір Гүлінің өрнегін қайталайды, ал платондық бес дене бес кристалл тор түріне сәйкес келеді.</p>
+   375→<ul>
+   376→<li>Тетраэдр — алмаз торы;</li>
+   377→<li>Текше — галит (NaCl);</li>
+   378→<li>Октаэдр — шпинель;</li>
+   379→<li>Додекаэдр — молекулалық кластерлер;</li>
+   380→<li>Икосаэдр — Шехтманның квазикристалдары.</li>
+   381→</ul>
+   382→<blockquote><p>«Көне адамдар рентгенқұрылымдық талдауды білмеген, бірақ олардың пішіне туралы интуициясы материяны басқаратын заңдарды таңқаларлық дәлдікпен тап болды», — біздің ғылыми тілші жазады.</p></blockquote>
+   383→
+   384→<h2>Молекулалардан галактикаларға дейін</h2>
+   385→<p>Сакралды таңбалардың геометриялық принциптері әртүрлі масштабтарда көрінеді. <strong>Фуллерен C60</strong> молекуласы қиғаш икосаэдр пішінінде — дәл сол платондық дене. ДНҚ спиральді құрылымдары алтын қимаға бағынады, ал өсімдіктердегі жапырақтардың орналасуы (филлотаксис) Фибоначчи сандарын ұстанады.</p>
+   386→<p>Metatron.ad бренді бұл таңбаларға саналы түрде сүйенеді: олар ғылыми дәлдікті және мәдени сабақтастықты біріктіретін көрнекі тіл болып табылады.</p>`,
+   387→      },
+   388→      zh: {
+   389→        title: "神圣几何：从古老符号到晶体学",
+   390→        excerpt:
+   391→          "生命之花与麦塔特隆立方体不仅是装饰图案，其背后蕴含着现代科学在晶体、分子与生物结构中同样发现的对称原理。",
+   392→        author: "Metatron.ad 编辑部",
+   393→        content: `<h2>什么是神圣几何</h2>
+   394→<p><strong>神圣几何</strong>是一组在各精神传统中被视为宇宙秩序映射的几何比例与形态，其代表符号包括<strong>生命之花</strong>、<strong>麦塔特隆立方体</strong>、<strong>生命之树</strong>与黄金分割。</p>
+   395→<p>生命之花由六边形网格上的 19 个相交圆构成。将所有圆心相连便得到麦塔特隆立方体——其中清晰可辨柏拉图立体：正四面体、立方体、正八面体、正十二面体与正二十面体。</p>
+   396→
+   397→<h2>晶体学中的对称性</h2>
+   398→<p>现代晶体学通过 230 个空间对称群描述晶体结构，其中许多与神圣符号所依据的原理直接相关。原子的六方最密堆积重复着生命之花的图案，而五种柏拉图立体对应于五类晶格类型。</p>
+   399→<ul>
+   400→<li>正四面体——金刚石晶格；</li>
+   401→<li>立方体——岩盐（NaCl）；</li>
+   402→<li>正八面体——尖晶石；</li>
+   403→<li>正十二面体——分子团簇；</li>
+   404→<li>正二十面体——谢赫特曼准晶。</li>
+   405→</ul>
+   406→<blockquote><p>"古人未曾掌握 X 射线结构分析，但他们对形态的直觉惊人地准确，竟触及了支配物质的规律"，我们的科学评论员写道。</p></blockquote>
+   407→
+   408→<h2>从分子到星系</h2>
+   409→<p>神圣符号的几何原理在不同尺度上均有体现。<strong>富勒烯 C60</strong> 分子呈截角二十面体——正是柏拉图立体之一。DNA 的螺旋结构遵循黄金分割，植物叶序（phyllotaxis）则遵循斐波那契数列。</p>
+   410→<p>Metatron.ad 品牌有意承袭这些符号：它们构成融合科学严谨与文化延续的视觉语言。</p>`,
+   411→      },
+   412→      en: {
+   413→        title: "Sacred Geometry: From Ancient Symbols to Crystallography",
+   414→        excerpt:
+   415→          "The Flower of Life and Metatron's Cube are not merely decorative. Behind them are principles of symmetry that modern science finds in crystals, molecules and biological structures.",
+   416→        author: "Metatron.ad Editorial",
+   417→        content: `<h2>What Sacred Geometry Is</h2>
+   418→<p><strong>Sacred geometry</strong> is a body of geometric proportions and forms that various spiritual traditions have considered a reflection of universal order. Its symbols include the <strong>Flower of Life</strong>, <strong>Metatron's Cube</strong>, the <strong>Tree of Life</strong> and the golden ratio.</p>
+   419→<p>The Flower of Life is a composition of 19 intersecting circles built on a hexagonal grid. Metatron's Cube is obtained by connecting the centres of every circle — within it one easily recognises the five Platonic solids: the tetrahedron, cube, octahedron, dodecahedron and icosahedron.</p>
+   420→
+   421→<h2>Symmetry in Crystallography</h2>
+   422→<p>Modern crystallography describes crystal structures through 230 space-symmetry groups — and many of them are directly related to the principles underlying sacred symbols. The hexagonal close-packing of atoms repeats the Flower of Life pattern, and the five Platonic solids correspond to five types of crystal lattice.</p>
+   423→<ul>
+   424→<li>Tetrahedron — diamond lattice;</li>
+   425→<li>Cube — halite (NaCl);</li>
+   426→<li>Octahedron — spinel;</li>
+   427→<li>Dodecahedron — molecular clusters;</li>
+   428→<li>Icosahedron — Shechtman quasicrystals.</li>
+   429→</ul>
+   430→<blockquote><p>"The ancients did not know X-ray diffraction, yet their intuition of form was remarkably accurate in grasping the laws that govern matter," writes our science correspondent.</p></blockquote>
+   431→
+   432→<h2>From Molecules to Galaxies</h2>
+   433→<p>The geometric principles of sacred symbols manifest across scales. The <strong>fullerene C60</strong> molecule has the shape of a truncated icosahedron — the very Platonic solid. DNA's helical structures obey the golden ratio, and phyllotaxis in plants follows the Fibonacci sequence.</p>
+   434→<p>The Metatron.ad brand consciously draws on these symbols: they form a visual language uniting scientific precision with cultural continuity.</p>`,
+   435→      },
+   436→    },
+   437→  },
+   438→
+   439→  // ===================================================================
+   440→  // 5. AI in scientific research
+   441→  // ===================================================================
+   442→  {
+   443→    slug: "ai-in-scientific-research",
+   444→    category: "sciTech",
+   445→    cover: "/images/seal-archangels.webp",
+   446→    coverAlt: "Seal of archangels symbolising guardian intelligence over scientific discovery",
+   447→    date: "2025-01-12",
+   448→    readTime: 7,
+   449→    translations: {
+   450→      ru: {
+   451→        title: "Искусственный интеллект в научных исследованиях: новые горизонты",
+   452→        excerpt:
+   453→          "От предсказания структуры белков до открытия новых материалов и дизайна лекарств — ИИ меняет то, как делается наука. Обзор ключевых прорывов и направлений.",
+   454→        author: "Редакция Metatron.ad",
+   455→        content: `<h2>Белки, материалы, лекарства</h2>
+   456→<p>В 2020 году система <strong>AlphaFold</strong> от DeepMind решила 50-летнюю задачу предсказания трёхмерной структуры белков по аминокислотной последовательности. К 2024 году база AlphaFold содержала структуры более 200 миллионов белков — это больше, чем за всю предыдущую историю экспериментальной кристаллографии.</p>
+   457→<p>Параллельно ИИ-модели научились предсказывать свойства новых материалов: <strong>GNoME</strong> от Google DeepMind открыла 2,2 миллиона новых кристаллических структур, эквивалентных почти 800 годам экспериментальной работы.</p>
+   458→
+   459→<h2>Как это работает</h2>
+   460→<p>Современные научные ИИ-системы — это не один алгоритм, а комбинация подходов:</p>
+   461→<ul>
+   462→<li><strong>Графовые нейросети</strong> для молекул и материалов (узлы — атомы, рёбра — связи);</li>
+   463→<li><strong>Трансформеры</strong> для последовательностей (белки, ДНК, тексты научных статей);</li>
+   464→<li><strong>Генеративные модели</strong> для дизайна новых молекул (диффузионные и авторегрессивные);</li>
+   465→<li><strong>Обучение с подкреплением</strong> для оптимизации путей синтеза.</li>
+   466→</ul>
+   467→<blockquote><p>«ИИ не заменяет эксперимент — он сужает пространство поиска от миллионов кандидатов к десяткам, которые стоит синтезировать», — подчёркивает наш научный обозреватель.</p></blockquote>
+   468→
+   469→<h2>Дизайн лекарств и активное обучение</h2>
+   470→<p>В фармацевтике ИИ сокращает ранние стадии разработки с 4–5 лет до 12–18 месяцев. Команды генерируют виртуальные библиотеки из миллиардов молекул, отбирают кандидатов по докингу к мишени и токсичности, а активное обучение замыкает цикл: экспериментальные данные возвращаются в модель и улучшают её.</p>
+   471→<p>Прорыв 2024 года — <strong>AlphaFold 3</strong>, способная предсказывать не только структуру белков, но и комплексы с ДНК, РНК и малыми молекулами. Это открывает путь к рациональному дизайну лекарств, где учёный формулирует желаемое свойство, а модель предлагает молекулу.</p>`,
+   472→      },
+   473→      kk: {
+   474→        title: "Ғылыми зерттеулердегі жасанды интеллект: жаңа көкжиектер",
+   475→        excerpt:
+   476→          "Ақуыз құрылымын болжаудан жаңа материалдарды ашқанға және дәрілік заттарды жобалауға дейін — жасанды интеллект ғылым жасалатын тәсілді өзгертуде. Негізгі жетістіктер мен бағыттарға шолу.",
+   477→        author: "Metatron.ad редакциясы",
+   478→        content: `<h2>Ақуыздар, материалдар, дәрілер</h2>
+   479→<p>2020 жылы DeepMind-тың <strong>AlphaFold</strong> жүйесі аминқышқылдық тізбегі бойынша ақуыздың үш өлшемді құрылымын болжау мәселесін — 50 жылдық мәселені шешті. 2024 жылға қарай AlphaFold дерекқоры 200 миллионнан астам ақуыз құрылымын қамтыды — бұл бұрынғы эксперименттік кристаллография тарихынан көп.</p>
+   480→<p>Парапар, ИИ-модельдер жаңа материалдардың қасиеттерін болжауды үйренді: Google DeepMind-тың <strong>GNoME</strong> жүйесі 2,2 миллион жаңа кристалдық құрылымды ашты, бұл эксперименттік жұмыстың 800 жылына балама.</p>
+   481→
+   482→<h2>Бұл қалай жұмыс істейді</h2>
+   483→<p>Заманауи ғылыми ИИ-жүйелер — бір алгоритм емес, тәсілдердің жиынтығы:</p>
+   484→<ul>
+   485→<li>Молекулалар мен материалдар үшін <strong>графтық нейрожелілер</strong> (түйіндер — атомдар, жиектер — байланыстар);</li>
+   486→<li>Тізбектер үшін <strong>трансформаторлар</strong> (ақуыздар, ДНҚ, ғылыми мақалалар мәтіні);</li>
+   487→<li>Жаңа молекулаларды жобалау үшін <strong>генеративті модельдер</strong> (диффузиялық және авторегрессивті);</li>
+   488→<li>Синтез жолдарын оңтайландыру үшін <strong>күшейтілген оқыту</strong>.</li>
+   489→</ul>
+   490→<blockquote><p>«ИИ экспериментті алмастырмайды — ол іздену кеңістігін миллиондаған үміткерден синтездеуге тұрарлық ондағанға дейін тарылтады», — біздің ғылыми тілші атап көрсетеді.</p></blockquote>
+   491→
+   492→<h2>Дәрі жобалау және белсенді оқыту</h2>
+   493→<p>Фармацевтикада ИИ ерте даму кезеңдерін 4–5 жылдан 12–18 айға қысқартады. Топтар миллиардтаған молекулалардан тұратын виртуалды кітапханаларды жасайды, үміткерлерді нысанға докинг және уыттылығы бойынша іріктейді, ал белсенді оқыту циклді жабады: эксперименттік деректер модельге оралады және оны жақсартады.</p>
+   494→<p>2024 жылғы жетістік — ақуыз құрылымын ғана емес, ДНҚ, РНҚ және кіші молекулалармен кешендерді де болжай алатын <strong>AlphaFold 3</strong>. Бұл ғалым қалаған қасиетті тұжырымдап, модель молекуланы ұсынатын рационалды дәрі жобалауға жол ашады.</p>`,
+   495→      },
+   496→      zh: {
+   497→        title: "人工智能在科学研究中的应用：新的视野",
+   498→        excerpt:
+   499→          "从预测蛋白质结构到发现新材料与药物设计——人工智能正在改变科学研究的方式。本文回顾关键突破与方向。",
+   500→        author: "Metatron.ad 编辑部",
+   501→        content: `<h2>蛋白质、材料、药物</h2>
+   502→<p>2020 年，DeepMind 的 <strong>AlphaFold</strong> 系统破解了困扰科学界 50 年的难题：根据氨基酸序列预测蛋白质的三维结构。到 2024 年，AlphaFold 数据库已收录超过 2 亿种蛋白质结构，远超以往实验晶体学的全部积累。</p>
+   503→<p>与此同时，AI 模型学会了预测新材料属性：Google DeepMind 的 <strong>GNoME</strong> 发现了 220 万种新晶体结构，相当于近 800 年的实验工作量。</p>
+   504→
+   505→<h2>它如何工作</h2>
+   506→<p>现代科研 AI 系统并非单一算法，而是多种方法的组合：</p>
+   507→<ul>
+   508→<li>面向分子与材料的<strong>图神经网络</strong>（节点为原子，边为化学键）；</li>
+   509→<li>面向序列的<strong>Transformer</strong>（蛋白质、DNA、论文文本）；</li>
+   510→<li>用于新分子设计的<strong>生成式模型</strong>（扩散模型与自回归模型）；</li>
+   511→<li>用于合成路径优化的<strong>强化学习</strong>。</li>
+   512→</ul>
+   513→<blockquote><p>"AI 并不取代实验，它将搜索空间从数百万候选物压缩到值得合成的数十个"，我们的科学评论员强调。</p></blockquote>
+   514→
+   515→<h2>药物设计与主动学习</h2>
+   516→<p>在制药领域，AI 将早期研发阶段从 4–5 年缩短至 12–18 个月。研究团队生成包含数十亿分子的虚拟库，按对接打分与毒性筛选候选物，而主动学习形成闭环：实验数据回流到模型，使其持续改进。</p>
+   517→<p>2024 年的突破是 <strong>AlphaFold 3</strong>——它不仅能预测蛋白质结构，还能预测其与 DNA、RNA 及小分子的复合物。这为"理性药物设计"打开了通路：科学家提出期望属性，模型给出分子。</p>`,
+   518→      },
+   519→      en: {
+   520→        title: "Artificial Intelligence in Scientific Research: New Horizons",
+   521→        excerpt:
+   522→          "From predicting protein structures to discovering new materials and designing drugs — AI is transforming how science is done. A review of key breakthroughs and directions.",
+   523→        author: "Metatron.ad Editorial",
+   524→        content: `<h2>Proteins, Materials, Drugs</h2>
+   525→<p>In 2020 DeepMind's <strong>AlphaFold</strong> solved a 50-year-old grand challenge: predicting the 3D structure of proteins from their amino-acid sequence. By 2024 the AlphaFold database contained structures for over 200 million proteins — more than the entire prior history of experimental crystallography.</p>
+   526→<p>In parallel, AI models learned to predict the properties of new materials: Google DeepMind's <strong>GNoME</strong> discovered 2.2 million new crystalline structures, equivalent to nearly 800 years of experimental work.</p>
+   527→
+   528→<h2>How It Works</h2>
+   529→<p>Modern scientific AI systems are not a single algorithm but a combination of approaches:</p>
+   530→<ul>
+   531→<li><strong>Graph neural networks</strong> for molecules and materials (nodes — atoms, edges — bonds);</li>
+   532→<li><strong>Transformers</strong> for sequences (proteins, DNA, scientific text);</li>
+   533→<li><strong>Generative models</strong> for new-molecule design (diffusion and autoregressive);</li>
+   534→<li><strong>Reinforcement learning</strong> for synthesis-path optimisation.</li>
+   535→</ul>
+   536→<blockquote><p>"AI does not replace the experiment — it narrows the search space from millions of candidates to the dozens worth synthesising," our science correspondent emphasises.</p></blockquote>
+   537→
+   538→<h2>Drug Design and Active Learning</h2>
+   539→<p>In pharma, AI compresses early-stage development from 4–5 years to 12–18 months. Teams generate virtual libraries of billions of molecules, filter candidates by docking to the target and toxicity, and active learning closes the loop: experimental data flows back into the model and improves it.</p>
+   540→<p>The 2024 breakthrough is <strong>AlphaFold 3</strong>, which can predict not just protein structures but their complexes with DNA, RNA and small molecules. This opens the path to rational drug design, where the scientist specifies a desired property and the model proposes a molecule.</p>`,
+   541→      },
+   542→    },
+   543→  },
+   544→
+   545→  // ===================================================================
+   546→  // 6. Astana Hub
+   547→  // ===================================================================
+   548→  {
+   549→    slug: "astana-hub-opportunities",
+   550→    category: "bridge",
+   551→    cover: "/images/seal-aurum.webp",
+   552→    coverAlt: "Aurum seal representing the golden gateway of Astana Hub tech park",
+   553→    date: "2025-01-10",
+   554→    readTime: 6,
+   555→    translations: {
+   556→      ru: {
+   557→        title: "Астана Хаб: ворота для технологических компаний в Казахстане",
+   558→        excerpt:
+   559→          "Международный технопарк Astana Hub предлагает резидентам 0% корпоративного налога, упрощённый визовый режим и доступ к рынку ЕАЭС. Как стать резидентом — и кому это выгодно.",
+   560→        author: "Редакция Metatron.ad",
+   561→        content: `<h2>Что такое Astana Hub</h2>
+   562→<p><strong>Astana Hub</strong> — международный технопарк в Астане, созданный в 2018 году для развития IT-сектора Казахстана. Он предоставляет резидентам пакет налоговых и визовых льгот, инфраструктуру и доступ к государственным программам поддержки. К 2024 году число резидентов превысило 1500 компаний.</p>
+   563→<p>Технопарк ориентирован на стартапы, аутсорсинговые компании и R&D-подразделения — особенно в областях AI, fintech, биотехнологий и e-commerce.</p>
+   564→
+   565→<h2>Налоговые и визовые льготы</h2>
+   566→<p>Резиденты Astana Hub освобождаются от ключевых налогов:</p>
+   567→<ul>
+   568→<li><strong>Корпоративный подоходный налог (КПН)</strong> — 0%;</li>
+   569→<li><strong>НДС</strong> — 0% по международным услугам;</li>
+   570→<li><strong>Индивидуальный подоходный налог</strong> для иностранных специалистов — 0%;</li>
+   571→<li><strong>Социальный налог</strong> — 0%.</li>
+   572→</ul>
+   573→<blockquote><p>«Astana Hub — это не просто налоговая гавань, а экосистема: акселератор, инвесторы, менторы и выход на рынок ЕАЭС объёмом 180 миллионов потребителей», — отмечает наш аналитик.</p></blockquote>
+   574→
+   575→<p>Для иностранных основателей и сотрудников действует упрощённый визовый режим: виза инвестора, цифровая residency и безвизовый въезд для граждан 80+ стран. Процедура регистрации компании занимает до 5 рабочих дней.</p>
+   576→
+   577→<h2>Как стать резидентом</h2>
+   578→<p>Процедура состоит из трёх шагов: <strong>подача заявки</strong> онлайн с бизнес-планом, <strong>экспертная оценка</strong> комиссией и <strong>заключение договора</strong>. Требование — соответствие одному из критериев: IT-профиль, экспорт услуг или R&D. Astana Hub особенно привлекателен для китайских компаний как «мост» в рынок ЕАЭС и Центральной Азии с понятной юрисдикцией и англоязычной средой.</p>`,
+   579→      },
+   580→      kk: {
+   581→        title: "Astana Hub: Қазақстандағы технологиялық компаниялар үшін қақпа",
+   582→        excerpt:
+   583→          "Халықаралық Astana Hub технопаркі резиденттерге 0% корпоративтік салық, оңайлатылған визалық режим және ЕАЭО нарығына қол жеткізуді ұсынады. Резидент қалай болады — және кімге тиімді.",
+   584→        author: "Metatron.ad редакциясы",
+   585→        content: `<h2>Astana Hub дегеніміз не</h2>
+   586→<p><strong>Astana Hub</strong> — Астанадағы халықаралық технопарк, 2018 жылы Қазақстанның IT-секторын дамыту үшін құрылған. Ол резиденттерге салықтық және визалық жеңілдіктер, инфрақұрылым және мемлекеттік қолдау бағдарламаларына қол жеткізуді ұсынады. 2024 жылға қарай резиденттер саны 1500 компаниядан асты.</p>
+   587→<p>Технопарк стартаптарға, аутсорсингтік компанияларға және R&D-бөлімшелерге бағытталған — әсіресе AI, fintech, биотехнологиялар және e-commerce салаларында.</p>
+   588→
+   589→<h2>Салықтық және визалық жеңілдіктер</h2>
+   590→<p>Astana Hub резиденттері негізгі салықтардан босатылады:</p>
+   591→<ul>
+   592→<li><strong>Корпоративтік табыс салығы</strong> — 0%;</li>
+   593→<li><strong>ҚҚС</strong> — халықаралық қызметтер бойынша 0%;</li>
+   594→<li>Шетелдік мамандар үшін <strong>жеке табыс салығы</strong> — 0%;</li>
+   595→<li><strong>Әлеуметтік салық</strong> — 0%.</li>
+   596→</ul>
+   597→<blockquote><p>«Astana Hub — жай салық гаваны емес, экожүйе: акселератор, инвесторлар, менторлар және 180 миллион тұтынушылық ЕАЭО нарығына шығу», — біздің аналитик атап өтеді.</p></blockquote>
+   598→
+   599→<p>Шетелдік құрылтайшылар мен қызметкерлер үшін оңайлатылған визалық режим қолданылады: инвестор визасы, сандық резиденттік және 80+ ел азаматтары үшін визасыз кіру. Компанияны тіркеу рәсімі 5 жұмыс күніне дейін созылады.</p>
+   600→
+   601→<h2>Резидент қалай болады</h2>
+   602→<p>Рәсім үш қадамнан тұрады: бизнес-жоспармен онлайн <strong>өтініш беру</strong>, комиссиямен <strong>сараптамалық бағалау</strong> және <strong>шарт жасасу</strong>. Талап — бір критерийге сәйкес келу: IT-профиль, қызметтер экспорты немесе R&D. Astana Hub Қытай компаниялары үшін түсінікті юрисдикциясы және ағылшынтілді ортасы бар ЕАЭО және Орталық Азия нарығына «көпір» ретінде өте тартымды.</p>`,
+   603→      },
+   604→      zh: {
+   605→        title: "Astana Hub：科技公司进入哈萨克斯坦的门户",
+   606→        excerpt:
+   607→          "国际科技园区 Astana Hub 为入驻企业提供 0% 企业所得税、简化签证制度与进入欧亚经济联盟市场的通道。如何成为居民——以及谁将获益。",
+   608→        author: "Metatron.ad 编辑部",
+   609→        content: `<h2>什么是 Astana Hub</h2>
+   610→<p><strong>Astana Hub</strong> 是位于阿斯塔纳的国际科技园，于 2018 年成立，旨在发展哈萨克斯坦的 IT 产业。它为入驻企业提供税收与签证优惠、基础设施，以及政府扶持计划的接入通道。截至 2024 年，入驻企业已超过 1500 家。</p>
+   611→<p>科技园面向初创企业、外包公司及研发部门，尤其在 AI、金融科技、生物技术与电商领域。</p>
+   612→
+   613→<h2>税收与签证优惠</h2>
+   614→<p>入驻企业可享受核心税种的豁免：</p>
+   615→<ul>
+   616→<li><strong>企业所得税</strong>——0%；</li>
+   617→<li><strong>增值税</strong>——对国际服务为 0%；</li>
+   618→<li>外籍专家的<strong>个人所得税</strong>——0%；</li>
+   619→<li><strong>社会税</strong>——0%。</li>
+   620→</ul>
+   621→<blockquote><p>"Astana Hub 并非单纯的税务避风港，而是一个生态系统：加速器、投资人、导师，以及通往 1.8 亿消费者规模的欧亚经济联盟市场"，我们的分析师指出。</p></blockquote>
+   622→
+   623→<p>外籍创始人与员工适用简化签证制度：投资人签证、数字居民身份，以及面向 80+ 国家的免签入境。公司注册流程最长 5 个工作日。</p>
+   624→
+   625→<h2>如何成为入驻企业</h2>
+   626→<p>流程分为三步：在线提交附商业计划书的<strong>申请</strong>、委员会<strong>专家评审</strong>、签署<strong>协议</strong>。门槛是符合以下任一条件：IT 业务、服务出口或研发。对于中国企业而言，Astana Hub 尤其具备"桥梁"价值——以清晰法域与英文环境，通向欧亚经济联盟与中亚市场。</p>`,
+   627→      },
+   628→      en: {
+   629→        title: "Astana Hub: A Gateway for Technology Companies in Kazakhstan",
+   630→        excerpt:
+   631→          "The Astana Hub international tech park offers residents 0% corporate tax, a simplified visa regime and access to the EAEU market. How to become a resident — and who benefits.",
+   632→        author: "Metatron.ad Editorial",
+   633→        content: `<h2>What Astana Hub Is</h2>
+   634→<p><strong>Astana Hub</strong> is an international tech park in Astana, established in 2018 to develop Kazakhstan's IT sector. It provides residents with a package of tax and visa incentives, infrastructure and access to state support programmes. By 2024 the number of residents exceeded 1,500 companies.</p>
+   635→<p>The tech park targets startups, outsourcing firms and R&D divisions — particularly in AI, fintech, biotechnology and e-commerce.</p>
+   636→
+   637→<h2>Tax and Visa Incentives</h2>
+   638→<p>Residents of Astana Hub are exempt from the core taxes:</p>
+   639→<ul>
+   640→<li><strong>Corporate income tax</strong> — 0%;</li>
+   641→<li><strong>VAT</strong> — 0% on international services;</li>
+   642→<li><strong>Personal income tax</strong> for foreign specialists — 0%;</li>
+   643→<li><strong>Social tax</strong> — 0%.</li>
+   644→</ul>
+   645→<blockquote><p>"Astana Hub is not just a tax haven but an ecosystem: an accelerator, investors, mentors and access to the 180-million-consumer EAEU market," notes our analyst.</p></blockquote>
+   646→
+   647→<p>Foreign founders and employees enjoy a simplified visa regime: investor visa, digital residency and visa-free entry for citizens of 80+ countries. Company registration takes up to 5 working days.</p>
+   648→
+   649→<h2>How to Become a Resident</h2>
+   650→<p>The procedure has three steps: <strong>online application</strong> with a business plan, <strong>expert review</strong> by a commission and <strong>contract signing</strong>. The requirement is to meet one of the criteria: an IT profile, export of services or R&D. Astana Hub is particularly attractive to Chinese companies as a "bridge" into the EAEU and Central Asian markets, with a clear jurisdiction and an English-speaking environment.</p>`,
+   651→      },
+   652→    },
+   653→  },
+   654→
+   655→  // ===================================================================
+   656→  // 7. China SEZ for foreign companies
+   657→  // ===================================================================
+   658→  {
+   659→    slug: "china-sez-for-foreign-companies",
+   660→    category: "bridge",
+   661→    cover: "/images/seal-star.webp",
+   662→    coverAlt: "Star seal symbolising the constellations of China's special economic zones",
+   663→    date: "2025-01-08",
+   664→    readTime: 6,
+   665→    translations: {
+   666→      ru: {
+   667→        title: "Специальные экономические зоны Китая: возможности для иностранных компаний",
+   668→        excerpt:
+   669→          "Шэньчжэнь, Шанхайская зона свободной торговли и Хайнань — три модели СЭЗ Китая. Что они предлагают иностранным бизнесам и как казахстанским компаниям там зарегистрироваться.",
+   670→        author: "Редакция Metatron.ad",
+   671→        content: `<h2>Три модели СЭЗ</h2>
+   672→<p>Китай развивает около <strong>20 специальных экономических зон</strong> разного типа. Для иностранных компаний наиболее интересны три:</p>
+   673→<ul>
+   674→<li><strong>Шэньчжэнь</strong> — центр аппаратного обеспечения и электроники, режим «зоны инноваций»;</li>
+   675→<li><strong>Шанхайская ЗСТ (Pudong)</strong> — финансовый и логистический хаб, свободная конвертация юаня;</li>
+   676→<li><strong>Хайнань — свободный порт</strong> (Hainan FTP) — нулевые пошлины на импорт оборудования и товаров.</li>
+   677→</ul>
+   678→<p>Каждая зона специализируется на своих отраслях: Шэньчжэнь — IoT и полупроводники, Шанхай — финансовые услуги и биотех, Хайнань — туризм, медицина и сельское хозяйство.</p>
+   679→
+   680→<h2>Льготы для иностранных компаний</h2>
+   681→<p>В СЭЗ действуют преференции по сравнению с общим режимом:</p>
+   682→<ul>
+   683→<li><strong>Корпоративный налог</strong> 15% (вместо 25%), а для high-tech — 15% по всей стране;</li>
+   684→<li><strong>Налог на прибыль</strong> — освобождение первых 2 лет, 50% снижение следующих 3 лет для high-tech;</li>
+   685→<li><strong>Таможенные пошлины</strong> — 0% на ввоз оборудования в Хайнани;</li>
+   686→<li><strong>Негативный список</strong> — сокращённый перечень закрытых для иностранцев отраслей.</li>
+   687→</ul>
+   688→<blockquote><p>«СЭЗ Китая — это не только налоги, но и доступ к цепочкам поставок: за один день в Шэньчжэне можно найти производителя для любого компонента», — подчёркивает наш аналитик по Китаю.</p></blockquote>
+   689→
+   690→<h2>Как зарегистрировать компанию</h2>
+   691→<p>Иностранная компания учреждает <strong>Wholly Foreign-Owned Enterprise (WFOE)</strong> — 100%-е дочернее общество. Процедура занимает 30–60 дней: подача устава в SAMR (Государственное управление по регулированию рынка), открытие капитального счёта в банке, регистрация в налоговой и таможне. Команда Metatron.ad помогает казахстанским компаниям пройти весь цикл — от выбора зоны до аренды офиса и найма персонала.</p>`,
+   692→      },
+   693→      kk: {
+   694→        title: "Қытайдың арнайы экономикалық аймақтары: шетелдік компаниялар үшін мүмкіндіктер",
+   695→        excerpt:
+   696→          "Шэньчжэнь, Шанхай еркін сауда аймағы және Хайнань — Қытай АЭА-ның үш моделі. Олар шетелдік бизнеске не ұсынады және қазақстандық компаниялар онда қалай тіркеледі.",
+   697→        author: "Metatron.ad редакциясы",
+   698→        content: `<h2>АЭА-ның үш моделі</h2>
+   699→<p>Қытай шамамен <strong>20 арнайы экономикалық аймақты</strong> (АЭА) әртүрлі типте дамытады. Шетелдік компаниялар үшін ең қызықты үшеуі:</p>
+   700→<ul>
+   701→<li><strong>Шэньчжэнь</strong> — жабдықтау мен электроника орталығы, «инновациялық аймақ» режимі;</li>
+   702→<li><strong>Шанхай ЕСА (Pudong)</strong> — қаржылық және логистикалық хаб, юаньдің еркін айырбасталуы;</li>
+   703→<li><strong>Хайнань — еркін порт</strong> (Hainan FTP) — жабдық пен тауарлар импортына нөлдік баж.</li>
+   704→</ul>
+   705→<p>Әр аймақ өз салаларына маманданған: Шэньчжэнь — IoT және жартылай өткізгіштер, Шанхай — қаржылық қызметтер мен биотех, Хайнань — туризм, медицина және ауыл шаруашылығы.</p>
+   706→
+   707→<h2>Шетелдік компаниялар үшін жеңілдіктер</h2>
+   708→<p>АЭА-да жалпы режиммен салыстырғанда преференциялар қолданылады:</p>
+   709→<ul>
+   710→<li><strong>Корпоративтік салық</strong> 15% (25% орнына), ал high-tech үшін — бүкіл елде 15%;</li>
+   711→<li><strong>Табыс салығы</strong> — high-tech үшін алғашқы 2 жыл босату, келесі 3 жыл 50% төмендету;</li>
+   712→<li><strong>Кеден баждары</strong> — Хайнаньда жабдық әкелуге 0%;</li>
+   713→<li><strong>Негативті тізім</strong> — шетелдіктерге жабық салалардың қысқартылған тізімі.</li>
+   714→</ul>
+   715→<blockquote><p>«Қытай АЭА — бұл тек салық емес, жеткізу тізбектеріне қол жеткізу де: Шэньчжэньде бір күнде кез келген компонентке өндіруші табуға болады», — біздің Қытай аналитигі атап көрсетеді.</p></blockquote>
+   716→
+   717→<h2>Компанияны қалай тіркеу керек</h2>
+   718→<p>Шетелдік компания <strong>Wholly Foreign-Owned Enterprise (WFOE)</strong> — 100%-дық еншілес қоғам құрады. Рәсім 30–60 күн созылады: SAMR-ға (Мемлекеттік нарықты реттеу басқармасы) жарғы беру, банкте капиталдық шот ашу, салық және кеденде тіркеу. Metatron.ad командасы қазақстандық компанияларға аймақ таңдаудан офис жалдау және қызметкер жалдауға дейінгі толық циклден өтуге көмектеседі.</p>`,
+   719→      },
+   720→      zh: {
+   721→        title: "中国经济特区：外资企业的机遇",
+   722→        excerpt:
+   723→          "深圳、上海自贸区与海南是中国经济特区的三种模式。它们为外资企业提供了什么——哈萨克斯坦企业如何在那里注册。",
+   724→        author: "Metatron.ad 编辑部",
+   725→        content: `<h2>三种特区模式</h2>
+   726→<p>中国正在发展约 <strong>20 个经济特区</strong>（SEZ），类型各异。对外资企业最具吸引力的是以下三个：</p>
+   727→<ul>
+   728→<li><strong>深圳</strong>——硬件与电子产业中心，"创新区"制度；</li>
+   729→<li><strong>上海自贸区（浦东）</strong>——金融与物流枢纽，人民币自由兑换；</li>
+   730→<li><strong>海南自由贸易港</strong>（Hainan FTP）——设备与商品进口零关税。</li>
+   731→</ul>
+   732→<p>每个特区各有侧重：深圳聚焦物联网与半导体，上海聚焦金融服务与生物科技，海南聚焦旅游、医疗与农业。</p>
+   733→
+   734→<h2>对外资企业的优惠</h2>
+   735→<p>特区内相较一般税制享有以下优惠：</p>
+   736→<ul>
+   737→<li><strong>企业所得税</strong> 15%（普通为 25%），高新技术企业在全国范围同样适用 15%；</li>
+   738→<li><strong>利润税</strong>——高新技术企业前两年免征，随后三年减半；</li>
+   739→<li><strong>关税</strong>——海南设备进口 0%；</li>
+   740→<li><strong>负面清单</strong>——对外资限制行业目录已缩减。</li>
+   741→</ul>
+   742→<blockquote><p>"中国的经济特区不止是税收——更意味着供应链的可及性：在深圳，一天之内就能为任何元器件找到制造商"，我们的中国分析师强调。</p></blockquote>
+   743→
+   744→<h2>如何注册公司</h2>
+   745→<p>外资企业可设立 <strong>外商独资企业（WFOE）</strong>——100% 控股的子公司。流程需 30–60 天：向市场监管总局（SAMR）提交章程、在银行开立资本账户、办理税务与海关登记。Metatron.ad 团队协助哈萨克斯坦企业完成从选址到租办公室、招聘员工的完整周期。</p>`,
+   746→      },
+   747→      en: {
+   748→        title: "China's Special Economic Zones: Opportunities for Foreign Companies",
+   749→        excerpt:
+   750→          "Shenzhen, the Shanghai FTZ and Hainan are three models of China's SEZs. What they offer foreign businesses — and how Kazakh companies can register there.",
+   751→        author: "Metatron.ad Editorial",
+   752→        content: `<h2>Three SEZ Models</h2>
+   753→<p>China runs about <strong>20 special economic zones</strong> of various types. The three of greatest interest to foreign companies are:</p>
+   754→<ul>
+   755→<li><strong>Shenzhen</strong> — hardware and electronics hub, "innovation zone" regime;</li>
+   756→<li><strong>Shanghai FTZ (Pudong)</strong> — financial and logistics hub, free yuan convertibility;</li>
+   757→<li><strong>Hainan Free Trade Port</strong> (Hainan FTP) — zero duties on equipment and goods imports.</li>
+   758→</ul>
+   759→<p>Each zone specialises in its own sectors: Shenzhen — IoT and semiconductors, Shanghai — financial services and biotech, Hainan — tourism, medicine and agriculture.</p>
+   760→
+   761→<h2>Incentives for Foreign Companies</h2>
+   762→<p>SEZs offer preferences over the general regime:</p>
+   763→<ul>
+   764→<li><strong>Corporate income tax</strong> 15% (instead of 25%), and 15% nationwide for high-tech;</li>
+   765→<li><strong>Profit tax</strong> — exemption for the first 2 years, 50% reduction for the next 3 for high-tech;</li>
+   766→<li><strong>Customs duties</strong> — 0% on equipment imports in Hainan;</li>
+   767→<li><strong>Negative list</strong> — a shortened list of sectors closed to foreigners.</li>
+   768→</ul>
+   769→<blockquote><p>"China's SEZs are not only about taxes but about access to supply chains: in Shenzhen you can find a manufacturer for any component in a single day," our China analyst emphasises.</p></blockquote>
+   770→
+   771→<h2>How to Register a Company</h2>
+   772→<p>A foreign company sets up a <strong>Wholly Foreign-Owned Enterprise (WFOE)</strong> — a 100% subsidiary. The procedure takes 30–60 days: filing the charter with SAMR (State Administration for Market Regulation), opening a capital account with a bank, registering with the tax and customs authorities. The Metatron.ad team helps Kazakh companies through the entire cycle — from selecting a zone to renting an office and hiring staff.</p>`,
+   773→      },
+   774→    },
+   775→  },
+   776→
+   777→  // ===================================================================
+   778→  // 8. Bioenergy market trends 2025
+   779→  // ===================================================================
+   780→  {
+   781→    slug: "bioenergy-market-trends-2025",
+   782→    category: "analytics",
+   783→    cover: "/images/seal-agla.webp",
+   784→    coverAlt: "AGLA seal representing analytical insight into bioenergy market trends",
+   785→    date: "2025-01-06",
+   786→    readTime: 5,
+   787→    translations: {
+   788→      ru: {
+   789→        title: "Рынок биоэнергетики 2025: тренды и прогнозы",
+   790→        excerpt:
+   791→          "Мировой рынок биоэнергетики к 2030 году превысит 400 миллиардов долларов. Какие сегменты растут быстрее всего, куда идут инвестиции и какие технологии задают тон в 2025 году.",
+   792→        author: "Редакция Metatron.ad",
+   793→        content: `<h2>Объём рынка и прогноз</h2>
+   794→<p>По оценкам Allied Market Research, мировой рынок биоэнергетики в 2024 году составил около <strong>325 миллиардов долларов</strong>, а к 2030 году достигнет 415 миллиардов при среднегодовом росте (CAGR) около 4,2%. Драйверы роста — обязательные нормы по смешиванию биотоплива, углеродные квоты и господдержка в ЕС, Китае и Бразилии.</p>
+   795→
+   796→<h2>Быстрорастущие сегменты</h2>
+   797→<p>Не весь биоэнергетический рынок растёт равномерно. Топ-3 сегмента по темпам роста:</p>
+   798→<ul>
+   799→<li><strong>Биогаз и биометан</strong> — CAGR 8,5%, спрос на Renewable Natural Gas в ЕС;</li>
+   800→<li><strong>Биоэтанол нового поколения</strong> — из целлюлозы и отходов, CAGR 7,1%;</li>
+   801→<li><strong>Устойчивое авиационное топливо (SAF)</strong> — CAGR 47%, но с малой базы.</li>
+   802→</ul>
+   803→<blockquote><p>«2025-й станет годом, когда SAF перестанет быть экзотикой: обязательные квоты ЕС (ReFuelEU Aviation) требуют 2% смешивания уже с этого года», — отмечает наш аналитик.</p></blockquote>
+   804→
+   805→<h2>Инвестиции и география</h2>
+   806→<p>Основные потоки инвестиций в 2024–2025 годах идут в три региона: <strong>ЕС</strong> (зелёные квоты и REPowerEU), <strong>Китай</strong> (программа «двойного карбона» — углеродного пика к 2030 и нейтральности к 2060) и <strong>США</strong> (IRA-стимулы на биотопливо). На развивающихся рынках Юго-Восточной Азии и Латинской Америки активны частные фонды, финансирующие малые модульные установки. Metatron.ad отслеживает эти потоки и помогает инвесторам оценивать проекты в Центральной Азии.</p>`,
+   807→      },
+   808→      kk: {
+   809→        title: "2025 биоэнергетика нарығы: трендтер мен болжамдар",
+   810→        excerpt:
+   811→          "2030 жылға қарай әлемдік биоэнергетика нарығы 400 миллиард доллардан асады. Қандай сегменттер ең тез өсуде, инвестициялар қайда барады және 2025 жылы қандай технологиялар бағыт белгілейді.",
+   812→        author: "Metatron.ad редакциясы",
+   813→        content: `<h2>Нарық көлемі және болжам</h2>
+   814→<p>Allied Market Research бағалауынша, әлемдік биоэнергетика нарығы 2024 жылы шамамен <strong>325 миллиард доллар</strong>ды құрады, ал 2030 жылы 415 миллиардқа жетеді, орташа жылдық өсім (CAGR) шамамен 4,2%. Өсім драйверлары — отынды араластыру міндетті нормалары, көміртегі квоталары және ЕО, Қытай мен Бразилиядағы мемлекеттік қолдау.</p>
+   815→
+   816→<h2>Тез өсетін сегменттер</h2>
+   817→<p>Биоэнергетикалық нарықтың бәрі бірдей өспейді. Өсу қарқыны бойынша топ-3 сегмент:</p>
+   818→<ul>
+   819→<li><strong>Биогаз және биометан</strong> — CAGR 8,5%, ЕО-да Renewable Natural Gas сұранысы;</li>
+   820→<li><strong>Жаңа буын биоэтанол</strong> — целлюлоза мен қалдықтардан, CAGR 7,1%;</li>
+   821→<li><strong>Тұрақты авиациялық отын (SAF)</strong> — CAGR 47%, бірақ кіші базадан.</li>
+   822→</ul>
+   823→<blockquote><p>«2025 жылы SAF экзотика болудан тоқтайды: ЕО-ның міндетті квоталары (ReFuelEU Aviation) 2% араластыруды осы жылдан талап етеді», — біздің аналитик атап өтеді.</p></blockquote>
+   824→
+   825→<h2>Инвестициялар және география</h2>
+   826→<p>2024–2025 жылдардағы негізгі инвестиция ағындары үш аймаққа барады: <strong>ЕО</strong> (жасыл квоталар және REPowerEU), <strong>Қытай</strong> («қос көміртегі» бағдарламасы — 2030 жылы пик, 2060 жылы бейтараптық) және <strong>АҚШ</strong> (биоотынға IRA-ынталандырулар). Оңтүстік-Шығыс Азия мен Латын Америкасының дамушы нарықтарында шағын модульді қондырғыларды қаржыландыратын жеке қорлар белсенді. Metatron.ad осы ағындарды бақылайды және инвесторларға Орталық Азиядағы жобаларды бағалауға көмектеседі.</p>`,
+   827→      },
+   828→      zh: {
+   829→        title: "2025 年生物能源市场：趋势与预测",
+   830→        excerpt:
+   831→          "到 2030 年，全球生物能源市场将超过 4000 亿美元。哪些细分市场增速最快、资金流向何处、哪些技术在 2025 年引领潮流。",
+   832→        author: "Metatron.ad 编辑部",
+   833→        content: `<h2>市场规模与预测</h2>
+   834→<p>据 Allied Market Research 估算，2024 年全球生物能源市场约为 <strong>3250 亿美元</strong>，到 2030 年将达到 4150 亿美元，年均复合增长率（CAGR）约为 4.2%。增长驱动力包括生物燃料强制掺混配额、碳配额以及欧盟、中国与巴西的政府扶持。</p>
+   835→
+   836→<h2>高速增长的细分市场</h2>
+   837→<p>生物能源市场并非均匀增长。按增速排名前三的细分市场：</p>
+   838→<ul>
+   839→<li><strong>沼气与生物甲烷</strong>——CAGR 8.5%，受欧盟可再生能源天然气需求拉动；</li>
+   840→<li><strong>新一代生物乙醇</strong>——以纤维素和废弃物为原料，CAGR 7.1%；</li>
+   841→<li><strong>可持续航空燃料（SAF）</strong>——CAGR 47%，但基数较小。</li>
+   842→</ul>
+   843→<blockquote><p>"2025 年将是 SAF 摆脱'新奇事物'标签的一年：欧盟 ReFuelEU Aviation 强制配额要求从今年起掺混比例达到 2%"，我们的分析师指出。</p></blockquote>
+   844→
+   845→<h2>投资与地理分布</h2>
+   846→<p>2024–2025 年主要投资流向三个区域：<strong>欧盟</strong>（绿色配额与 REPowerEU）、<strong>中国</strong>（"双碳"规划——2030 年达峰、2060 年中和）、<strong>美国</strong>（IRA 对生物燃料的激励）。在东南亚与拉美的新兴市场，私募基金正积极资助小型模块化装置。Metatron.ad 持续跟踪这些流向，并协助投资人在中亚评估项目。</p>`,
+   847→      },
+   848→      en: {
+   849→        title: "The Bioenergy Market in 2025: Trends and Forecasts",
+   850→        excerpt:
+   851→          "The global bioenergy market will exceed 400 billion dollars by 2030. Which segments are growing fastest, where investment is flowing, and which technologies set the tone in 2025.",
+   852→        author: "Metatron.ad Editorial",
+   853→        content: `<h2>Market Size and Forecast</h2>
+   854→<p>According to Allied Market Research, the global bioenergy market in 2024 was about <strong>325 billion dollars</strong>, and will reach 415 billion by 2030 at a CAGR of around 4.2%. Growth drivers include mandatory biofuel blending mandates, carbon quotas and state support in the EU, China and Brazil.</p>
+   855→
+   856→<h2>Fast-Growing Segments</h2>
+   857→<p>Not all of the bioenergy market grows evenly. The top three segments by growth rate:</p>
+   858→<ul>
+   859→<li><strong>Biogas and biomethane</strong> — CAGR 8.5%, driven by Renewable Natural Gas demand in the EU;</li>
+   860→<li><strong>Next-generation bioethanol</strong> — from cellulose and waste, CAGR 7.1%;</li>
+   861→<li><strong>Sustainable Aviation Fuel (SAF)</strong> — CAGR 47%, but from a small base.</li>
+   862→</ul>
+   863→<blockquote><p>"2025 will be the year SAF stops being exotic: the EU's mandatory quotas (ReFuelEU Aviation) require 2% blending starting this year," notes our analyst.</p></blockquote>
+   864→
+   865→<h2>Investment and Geography</h2>
+   866→<p>The main investment flows in 2024–2025 are directed at three regions: the <strong>EU</strong> (green quotas and REPowerEU), <strong>China</strong> (the "dual carbon" programme — peak by 2030 and neutrality by 2060) and the <strong>US</strong> (IRA incentives for biofuels). In the emerging markets of Southeast Asia and Latin America, private funds are actively financing small modular installations. Metatron.ad tracks these flows and helps investors evaluate projects in Central Asia.</p>`,
+   867→      },
+   868→    },
+   869→  },
+   870→
+   871→  // ===================================================================
+   872→  // 9. Patents and trademarks CN-KZ
+   873→  // ===================================================================
+   874→  {
+   875→    slug: "patents-and-trademarks-cn-kz",
+   876→    category: "bridge",
+   877→    cover: "/images/metatron-mandala.webp",
+   878→    coverAlt: "Metatron mandala symbolising the layered protection of intellectual property",
+   879→    date: "2025-01-04",
+   880→    readTime: 6,
+   881→    translations: {
+   882→      ru: {
+   883→        title: "Защита интеллектуальной собственности в Китае и Казахстане",
+   884→        excerpt:
+   885→          "Регистрация патентов и товарных знаков в двух юрисдикциях, Мадридская система и типичные ошибки иностранных заявителей. Как команда Metatron.ad ведёт сделки по ИС.",
+   886→        author: "Редакция Metatron.ad",
+   887→        content: `<h2>Две юрисдикции — два подхода</h2>
+   888→<p>Китай и Казахстан — участники <strong>Мадридской системы</strong> международной регистрации товарных знаков, что позволяет подать одну заявку на регистрацию в более чем 130 странах. Но в каждой юрисдикции есть своя специфика.</p>
+   889→<ul>
+   890→<li><strong>Китай</strong> — принцип «first-to-file»; товарный знак регистрируется в одном из 45 классов; патент на изобретение действует 20 лет;</li>
+   891→<li><strong>Казахстан</strong> — также first-to-file; товарные знаки по Ниццкой классификации; патент на изобретение — 20 лет, на полезную модель — 5+5;</li>
+   892→<li>Срок экспертизы товарного знака: в Китае 12–18 месяцев, в Казахстане 9–12.</li>
+   893→</ul>
+   894→<blockquote><p>«Самая частая ошибка — выйти на рынок без регистрации знака и обнаружить, что его уже занял местный агент», — предупреждает наш юрист по ИС.</p></blockquote>
+   895→
+   896→<h2>Стратегия подачи</h2>
+   897→<p>Команда Metatron.ad рекомендует параллельную стратегию: национальная подача в приоритетной юрисдикции + Мадридская заявка в течение 6 месяцев (приоритетный срок). Для патентов на изобретения используется <strong>Договор о патентной кооперации (PCT)</strong> — одна международная заявка даёт 30 месяцев на решение по национальным фазам.</p>
+   898→
+   899→<h2>Типичные ошибки</h2>
+   900→<p>Чужие ошибки дешевле чужих успехов. Из практики:</p>
+   901→<ul>
+   902→<li>Регистрация знака только на латинице — китайские конкуренты регистрируют фонетический аналог;</li>
+   903→<li>Непроверка доступности знака перед выводом продукта в WeChat-commerce;</li>
+   904→<li>Игнорирование защиты дизайна и полезных моделей там, где изобретение не патентоспособно;</li>
+   905→<li>Отсутствие локального представителя в PCT-фазе в Китае.</li>
+   906→</ul>
+   907→<p>Metatron.ad работает с патентными поверенными в Пекине и Астане и ведёт полный цикл: от патентного поиска до поддержания в силе и защиты в случае нарушения.</p>`,
+   908→      },
+   909→      kk: {
+   910→        title: "Қытай мен Қазақстандағы интеллектуалды меншікті қорғау",
+   911→        excerpt:
+   912→          "Екі юрисдикцияда патенттер мен сауда белгілерін тіркеу, Мадрид жүйесі және шетелдік өтініш берушілердің типтік қателері. Metatron.ad командасы ЗМ мәмілелерін қалай жүргізеді.",
+   913→        author: "Metatron.ad редакциясы",
+   914→        content: `<h2>Екі юрисдикция — екі тәсіл</h2>
+   915→<p>Қытай мен Қазақстан — сауда белгілерін халықаралық тіркеудің <strong>Мадрид жүйесіне</strong> қатысушылар, бұл 130-дан астам елде тіркеу үшін бір өтініш беруге мүмкіндік береді. Бірақ әр юрисдикцияда өз ерекшелігі бар.</p>
+   916→<ul>
+   917→<li><strong>Қытай</strong> — «first-to-file» принципі; сауда белгісі 45 кластан бірінде тіркеледі; өнер табыс патенті 20 жыл әрекет етеді;</li>
+   918→<li><strong>Қазақстан</strong> — сол first-to-file; Ницца жіктелуі бойынша сауда белгілері; өнер табыс патенті — 20 жыл, пайдалы модель — 5+5;</li>
+   919→<li>Сауда белгісін сараптау мерзімі: Қытайда 12–18 ай, Қазақстанда 9–12 ай.</li>
+   920→</ul>
+   921→<blockquote><p>«Ең жиі қате — белгіні тіркестірмей нарыққа шығу және оны жергілікті агент бұрын алып қойғанын байқау», — біздің ЗМ заңгері ескертеді.</p></blockquote>
+   922→
+   923→<h2>Беру стратегиясы</h2>
+   924→<p>Metatron.ad командасы параллельді стратегияны ұсынады: басым юрисдикцияда ұлттық беру + 6 ай ішінде (басымдық мерзімі) Мадрид өтініші. Өнер табыс патенттері үшін <strong>Патенттік ынтымақтастық шарты (PCT)</strong> қолданылады — бір халықаралық өтініш ұлттық фазалар бойынша шешім үшін 30 ай береді.</p>
+   925→
+   926→<h2>Типтік қателер</h2>
+   927→<p>Бөгде қателер бөгде жетістіктерден арзан. Тәжірибеден:</p>
+   928→<ul>
+   929→<li>Белгіні тек латын әрпімен тіркеу — қытайлық бәсекелестер фонетикалық балама тіркейді;</li>
+   930→<li>Өнімді WeChat-commerce-те шығарар алдында белгінің қолжетімділігін тексермеу;</li>
+   931→<li>Өнер табыс патентке жатпайтын жерде дизайн мен пайдалы модельдерді қорғауды елемеу;</li>
+   932→<li>Қытайда PCT-фазада жергілікті өкілдің болмауы.</li>
+   933→</ul>
+   934→<p>Metatron.ad Пекин мен Астанадағы патенттік өкілдермен жұмыс істейді және патенттік іздеуден күште сақтауға және бұзу жағдайында қорғауға дейінгі толық циклді жүргізеді.</p>`,
+   935→      },
+   936→      zh: {
+   937→        title: "在中国与哈萨克斯坦保护知识产权",
+   938→        excerpt:
+   939→          "在两个法域注册专利与商标、马德里体系，以及外国申请人的常见错误。Metatron.ad 团队如何承办知识产权交易。",
+   940→        author: "Metatron.ad 编辑部",
+   941→        content: `<h2>两个法域——两种路径</h2>
+   942→<p>中国与哈萨克斯坦同为商标国际注册<strong>马德里体系</strong>的成员，可通过一份申请在 130 多个国家获得注册。但每个法域各有其特点。</p>
+   943→<ul>
+   944→<li><strong>中国</strong>——"申请在先"原则；商标按 45 个类别之一注册；发明专利保护期 20 年；</li>
+   945→<li><strong>哈萨克斯坦</strong>——同样遵循"申请在先"；商标按尼斯分类；发明专利 20 年、实用新型 5+5；</li>
+   946→<li>商标审查周期：中国 12–18 个月，哈萨克斯坦 9–12 个月。</li>
+   947→</ul>
+   948→<blockquote><p>"最常见的错误是在未注册商标的情况下就进入市场，随后发现商标已被本地代理商抢注"，我们的知识产权律师提醒。</p></blockquote>
+   949→
+   950→<h2>申请策略</h2>
+   951→<p>Metatron.ad 团队推荐并行策略：在优先法域进行国家申请 + 在 6 个月优先权期限内提交马德里申请。对于发明专利，采用<strong>专利合作条约（PCT）</strong>——一份国际申请可给予 30 个月以决定是否进入国家阶段。</p>
+   952→
+   953→<h2>常见错误</h2>
+   954→<p>从别人的错误中学习，比从别人的成功中学习更便宜。实务中常见：</p>
+   955→<ul>
+   956→<li>仅以拉丁字母注册商标——中国竞争者会注册其音译近似；</li>
+   957→<li>在通过微信电商投放产品前未检索商标可用性；</li>
+   958→<li>当发明不具备专利性时，忽视外观与实用新型的保护；</li>
+   959→<li>在中国的 PCT 阶段没有本地代理人。</li>
+   960→</ul>
+   961→<p>Metatron.ad 与北京和阿斯塔纳的专利代理人合作，提供从专利检索到维持有效、以及在侵权时进行维权的完整周期服务。</p>`,
+   962→      },
+   963→      en: {
+   964→        title: "Protecting Intellectual Property in China and Kazakhstan",
+   965→        excerpt:
+   966→          "Registering patents and trademarks in two jurisdictions, the Madrid system and the typical mistakes of foreign applicants. How the Metatron.ad team handles IP deals.",
+   967→        author: "Metatron.ad Editorial",
+   968→        content: `<h2>Two Jurisdictions — Two Approaches</h2>
+   969→<p>China and Kazakhstan are both participants in the <strong>Madrid System</strong> for the international registration of trademarks, which allows a single application to cover registration in over 130 countries. But each jurisdiction has its own specifics.</p>
+   970→<ul>
+   971→<li><strong>China</strong> — the "first-to-file" principle; a trademark is registered in one of 45 classes; an invention patent runs for 20 years;</li>
+   972→<li><strong>Kazakhstan</strong> — also first-to-file; trademarks follow the Nice Classification; invention patent — 20 years, utility model — 5+5;</li>
+   973→<li>Trademark examination period: 12–18 months in China, 9–12 in Kazakhstan.</li>
+   974→</ul>
+   975→<blockquote><p>"The most common mistake is entering the market without registering the mark and then finding that a local agent has already taken it," warns our IP lawyer.</p></blockquote>
+   976→
+   977→<h2>Filing Strategy</h2>
+   978→<p>The Metatron.ad team recommends a parallel strategy: a national filing in the priority jurisdiction + a Madrid application within 6 months (the priority period). For invention patents, the <strong>Patent Cooperation Treaty (PCT)</strong> is used — a single international application gives 30 months to decide on national phases.</p>
+   979→
+   980→<h2>Typical Mistakes</h2>
+   981→<p>Learning from others' mistakes is cheaper than from their successes. From practice:</p>
+   982→<ul>
+   983→<li>Registering the mark only in Latin script — Chinese competitors register a phonetic analogue;</li>
+   984→<li>Failing to check mark availability before launching a product in WeChat commerce;</li>
+   985→<li>Ignoring design and utility-model protection where the invention is not patentable;</li>
+   986→<li>Having no local representative for the PCT phase in China.</li>
+   987→</ul>
+   988→<p>Metatron.ad works with patent attorneys in Beijing and Astana and runs the full cycle — from patent search to maintenance and enforcement in case of infringement.</p>`,
+   989→      },
+   990→    },
+   991→  },
+   992→
+   993→  // ===================================================================
+   994→  // 10. Quantum computing basics
+   995→  // ===================================================================
+   996→  {
+   997→    slug: "quantum-computing-basics",
+   998→    category: "sciPop",
+   999→    cover: "/images/flower-of-life.webp",
+  1000→    coverAlt: "Flower of Life pattern evoking the layered states of quantum superposition",
+  1001→    date: "2025-01-02",
+  1002→    readTime: 5,
+  1003→    translations: {
+  1004→      ru: {
+  1005→        title: "Квантовые вычисления простыми словами",
+  1006→        excerpt:
+  1007→          "Кубиты, суперпозиция и запутанность — что делает квантовый компьютер другим и какие задачи он уже решает. Без формул, на понятных аналогиях.",
+  1008→        author: "Редакция Metatron.ad",
+  1009→        content: `<h2>Что такое кубит</h2>
+  1010→<p>Классический бит хранит одно значение — 0 или 1. <strong>Кубит</strong> (квантовый бит) может находиться в состоянии 0, в состоянии 1 или в их <strong>суперпозиции</strong> — комбинации обоих с определёнными вероятностями. Пока вы не измерили кубит, он хранит оба значения одновременно.</p>
+  1011→<p>Это не значит, что кубит содержит «два числа». Правильнее сказать: квантовый компьютер ведёт вычисления над распределением вероятностей, а классический — над конкретными значениями.</p>
+  1012→
+  1013→<h2>Суперпозиция и запутанность</h2>
+  1014→<p>Два явления делают квантовые вычисления мощнее классических:</p>
+  1015→<ul>
+  1016→<li><strong>Суперпозиция</strong> — один кубит хранит много состояний сразу;</li>
+  1017→<li><strong>Запутанность</strong> (entanglement) — состояния нескольких кубитов связаны так, что измерение одного мгновенно определяет другой;</li>
+  1018→<li><strong>Интерференция</strong> — алгоритм усиливает правильные ответы и гасит неправильные.</li>
+  1019→</ul>
+  1020→<blockquote><p>«Квантовый компьютер — не более быстрый ноутбук, а принципиально другая машина для другого класса задач», — объясняет наш научный обозреватель.</p></blockquote>
+  1021→
+  1022→<h2>Где это уже применяется</h2>
+  1023→<p>Квантовые компьютеры не заменят домашние ноутбуки — они заменят суперкомпьютеры в трёх классах задач: <strong>симуляция квантовых систем</strong> (химия, материаловедение), <strong>оптимизация</strong> (логистика, финансы) и <strong>криптография</strong> (взлом RSA и постквантовое шифрование). IBM, Google и китайский OriginQ уже предлагают облачный доступ к сотням кубитов, а 2024 год принёс первые коммерческие приложения в оптимизации портфелей и дизайне катализаторов.</p>`,
+  1024→      },
+  1025→      kk: {
+  1026→        title: "Кванттық есептеу қарапайым сөзбен",
+  1027→        excerpt:
+  1028→          "Кубиттер, суперпозиция және шатасу — кванттық компьютерді басқа ететін не және ол қандай есептерді шешіп жатыр. Формуласыз, түсінікті аналогиялармен.",
+  1029→        author: "Metatron.ad редакциясы",
+  1030→        content: `<h2>Кубит дегеніміз не</h2>
+  1031→<p>Классикалық бит бір мәнді сақтайды — 0 немесе 1. <strong>Кубит</strong> (кванттық бит) 0 күйінде, 1 күйінде немесе олардың <strong>суперпозициясында</strong> — белгілі ықтималдықтармен екеуінің үйлесімінде бола алады. Сіз кубитті өлшегенге дейін ол екі мәнді бірден сақтайды.</p>
+  1032→<p>Бұл кубит «екі сан» сақтайды дегенді білдірмейді. Дұрысы: кванттық компьютер ықтималдықтар таралуы бойынша есептеулер жүргізеді, ал классикалық — нақты мәндер бойынша.</p>
+  1033→
+  1034→<h2>Суперпозиция және шатасу</h2>
+  1035→<p>Екі құбылыс кванттық есептеуді классикалықтан күшті етеді:</p>
+  1036→<ul>
+  1037→<li><strong>Суперпозиция</strong> — бір кубит бірден көп күйді сақтайды;</li>
+  1038→<li><strong>Шатасу</strong> (entanglement) — бірнеше кубит күйі байланысты, бірін өлшеу басқасын лезде анықтайды;</li>
+  1039→<li><strong>Интерференция</strong> — алгоритм дұрыс жауаптарды күшейтіп, қате жауаптарды әлсіретеді.</li>
+  1040→</ul>
+  1041→<blockquote><p>«Кванттық компьютер — жылдамырақ ноутбук емес, басқа есептер класы үшін іргелі басқа машина», — біздің ғылыми тілші түсіндіреді.</p></blockquote>
+  1042→
+  1043→<h2>Бұл қайда қолданылып жатыр</h2>
+  1044→<p>Кванттық компьютерлер үй ноутбуктарын алмастырмайды — олар суперкомпьютерлерді үш есептер класында алмастырады: <strong>кванттық жүйелерді симуляциялау</strong> (химия, материалтану), <strong>оңтайландыру</strong> (логистика, қаржы) және <strong>криптография</strong> (RSA-ны бұзу және посткванттық шифрлау). IBM, Google және қытайлық OriginQ жүздеген кубитке бұлтты қол жеткізуді ұсынады, ал 2024 жыл портфельдерді оңтайландыру мен катализаторларды жобалауда алғашқы коммерциялық қолданбаларды әкелді.</p>`,
+  1045→      },
+  1046→      zh: {
+  1047→        title: "用简单的话讲量子计算",
+  1048→        excerpt:
+  1049→          "量子比特、叠加态与纠缠——是什么让量子计算机与众不同，它已经在解决哪些问题。没有公式，只用通俗类比。",
+  1050→        author: "Metatron.ad 编辑部",
+  1051→        content: `<h2>什么是量子比特</h2>
+  1052→<p>经典比特只能存储一个值——0 或 1。<strong>量子比特（qubit）</strong>则可以处于 0 态、1 态，或两者的<strong>叠加态</strong>——以一定概率组合的两者。在你测量之前，量子比特同时持有两个值。</p>
+  1053→<p>这并不意味着量子比特存储了"两个数字"。更准确的说法是：量子计算机对概率分布进行运算，而经典计算机对具体数值运算。</p>
+  1054→
+  1055→<h2>叠加与纠缠</h2>
+  1056→<p>让量子计算比经典计算更强大的，是两种现象：</p>
+  1057→<ul>
+  1058→<li><strong>叠加态</strong>——一个量子比特同时持有多种状态；</li>
+  1059→<li><strong>纠缠</strong>（entanglement）——多个量子比特的状态彼此关联，测量其中一个会瞬间确定另一个；</li>
+  1060→<li><strong>干涉</strong>——算法放大正确答案，抑制错误答案。</li>
+  1061→</ul>
+  1062→<blockquote><p>"量子计算机不是更快的笔记本电脑，而是面向另一类问题的、本质上不同的机器"，我们的科学评论员解释道。</p></blockquote>
+  1063→
+  1064→<h2>它已经在何处应用</h2>
+  1065→<p>量子计算机不会取代家用笔记本——它们将在三类任务上取代超级计算机：<strong>量子系统模拟</strong>（化学、材料科学）、<strong>优化</strong>（物流、金融）与<strong>密码学</strong>（破解 RSA 与后量子加密）。IBM、Google 和中国的 OriginQ（本源量子）已提供对数百量子比特的云端访问，2024 年更带来了组合优化与催化剂设计领域的首批商业应用。</p>`,
+  1066→      },
+  1067→      en: {
+  1068→        title: "Quantum Computing in Plain Words",
+  1069→        excerpt:
+  1070→          "Qubits, superposition and entanglement — what makes a quantum computer different and what tasks it already solves. No formulas, just accessible analogies.",
+  1071→        author: "Metatron.ad Editorial",
+  1072→        content: `<h2>What a Qubit Is</h2>
+  1073→<p>A classical bit stores one value — 0 or 1. A <strong>qubit</strong> (quantum bit) can be in state 0, in state 1, or in a <strong>superposition</strong> of both — a combination with defined probabilities. Until you measure it, the qubit holds both values at once.</p>
+  1074→<p>This does not mean a qubit contains "two numbers". More precisely: a quantum computer computes over a probability distribution, while a classical computer computes over concrete values.</p>
+  1075→
+  1076→<h2>Superposition and Entanglement</h2>
+  1077→<p>Two phenomena make quantum computing more powerful than classical:</p>
+  1078→<ul>
+  1079→<li><strong>Superposition</strong> — a single qubit holds many states at once;</li>
+  1080→<li><strong>Entanglement</strong> — the states of several qubits are linked so that measuring one instantly determines the other;</li>
+  1081→<li><strong>Interference</strong> — the algorithm amplifies correct answers and cancels wrong ones.</li>
+  1082→</ul>
+  1083→<blockquote><p>"A quantum computer is not a faster laptop but a fundamentally different machine for a different class of problems," explains our science correspondent.</p></blockquote>
+  1084→
+  1085→<h2>Where It Is Already Used</h2>
+  1086→<p>Quantum computers will not replace home laptops — they will replace supercomputers in three classes of tasks: <strong>simulation of quantum systems</strong> (chemistry, materials science), <strong>optimisation</strong> (logistics, finance) and <strong>cryptography</strong> (breaking RSA and post-quantum encryption). IBM, Google and China's OriginQ already offer cloud access to hundreds of qubits, and 2024 brought the first commercial applications in portfolio optimisation and catalyst design.</p>`,
+  1087→      },
+  1088→    },
+  1089→  },
+  1090→];
+  1091→

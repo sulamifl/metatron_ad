@@ -1,0 +1,45 @@
+// Prisma schema for Metatron.ad
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Обращения через форму обратной связи / WeChat / Telegram
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String
+  message   String
+  channel   String   @default("form") // form | wechat | telegram
+  locale    String   @default("ru")
+  status    String   @default("new") // new | read | answered
+  createdAt DateTime @default(now())
+}
+
+// Подписчики email-рассылки / прогнозов
+model Subscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  locale    String   @default("ru")
+  plan      String   @default("free") // free | business | enterprise
+  createdAt DateTime @default(now())
+}
+
+// ИИ-прогнозы (генерируются агентом)
+model Forecast {
+  id          String   @id @default(cuid())
+  title       String
+  summary     String
+  confidence  Int      // 0-100
+  category    String   // energy | finance | trade | tech
+  sources     Int      @default(0)
+  isPremium   Boolean  @default(false)
+  publishedAt DateTime @default(now())
+}
